@@ -40,7 +40,11 @@ export function Wordmark({ subtitle, compact }: { subtitle?: string; compact?: b
   );
 }
 
-/** Animated status dot with tone variants */
+/**
+ * Animated status dot indicator.
+ * @param tone - visual variant: ok, warn, or neutral
+ * @param live - if true, adds a pulse animation
+ */
 export function StatusDot({
   tone = "neutral",
   live,
