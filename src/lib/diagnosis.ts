@@ -29,7 +29,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Uniform mid-to-deep green coloration across the entire blade",
       "Veins and interveinal tissue are equally coloured with no discolouration",
       "No lesions, spots, pustules, or necrotic areas",
-      "Leaf shape and surface texture are consistent with the healthy reference standard",
+      "Leaf shape and surface texture consistent with the healthy reference standard",
     ],
     immediate: ["No corrective action is required for this sample. Monitor surrounding plants as a precaution."],
     field: [
