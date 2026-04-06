@@ -188,6 +188,10 @@ export type ImageQualityMetrics = {
   background: boolean;
 };
 
+/**
+ * Heuristic image quality check: lighting, focus (Laplacian variance),
+ * and green-channel dominance as a proxy for leaf visibility.
+ */
 function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetrics {
   const n = size * size;
   let sumR = 0, sumG = 0, sumB = 0;
