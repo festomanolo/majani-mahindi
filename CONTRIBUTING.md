@@ -26,3 +26,11 @@ We use Prettier and ESLint. Run `npm run format` before committing.
 - [ ] `npm run lint` passes
 - [ ] `npm run build` passes
 - [ ] Commit messages follow conventional commits
+
+## Filing Issues
+
+Please search existing issues before filing a new one. Include:
+- Steps to reproduce
+- Expected vs actual behaviour
+- Browser/OS version
+- Console errors if any
