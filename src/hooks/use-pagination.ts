@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 
+/** Paginate an array of items; returns the current page slice and controls */
 export function usePagination<T>(items: T[], pageSize = 20) {
   const [page, setPage] = useState(1);
   const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
