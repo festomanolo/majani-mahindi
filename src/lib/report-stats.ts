@@ -3,6 +3,7 @@ import type { ConditionKey } from "./diagnosis";
 
 export type ConditionCount = { key: ConditionKey; name: string; count: number; pct: number };
 
+/** Aggregated statistics computed from a list of samples */
 export type ReportStats = {
   total: number;
   completed: number;
