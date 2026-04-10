@@ -28,6 +28,7 @@ function getLanIp(): string {
 
 const LAN_IP = getLanIp();
 
+// See https://vitejs.dev/config/
 export default defineConfig({
   server: {
     host: true,   // bind to 0.0.0.0 so phones on the same Wi-Fi can connect
