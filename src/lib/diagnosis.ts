@@ -33,7 +33,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     ],
     immediate: ["No corrective action is required for this sample. Monitor surrounding plants as a precaution."],
     field: [
-      "Maintain the current fertiliser and crop-protection programme.",
+      "Maintain the current fertiliser and integrated crop-protection programme.",
       "Continue routine scouting across different sections of the field.",
       "Ensure irrigation schedules maintain optimal soil moisture — avoid waterlogging.",
     ],
