@@ -69,7 +69,7 @@ const CHANNEL = "maizevision.sync.v1";
 const initialState: State = {
   connection: {
     status: "disconnected",
-    pcName: "FIELD-LAB-01",
+    pcName: "STATION-01",
     phoneName: "Field scanner",
     network: "MaizeVision-Local",
     address: "loading...",
