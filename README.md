@@ -19,7 +19,7 @@ Node.js 20+, Chrome 112+, Edge 112+, or any browser with WASM SIMD support.
 
 ## Quick Start
 
-> All commands assume you're in the project root.
+> Make sure you're in the project root directory.
 
 ```bash
 # 1. Install dependencies
