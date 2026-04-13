@@ -174,6 +174,7 @@ function getSession(): Promise<ort.InferenceSession> {
   return sessionPromise;
 }
 
+/** Pre-load ONNX session to reduce first-scan latency */
 export function prewarmModel(): void {
   getSession().catch(() => { sessionPromise = null; });
 }
