@@ -7,7 +7,7 @@ export const MAX_SAMPLES = 30;
 export const MAX_IMAGE_SAMPLES = 6;
 
 /** Low-confidence threshold in percent */
-export const LOW_CONF_PCT = 45;
+export const LOW_CONF_PCT = 43;
 
 /** Not-maize probability threshold */
 export const NOT_MAIZE_PROB = 0.62;
