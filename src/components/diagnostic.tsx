@@ -113,7 +113,7 @@ export function ObservedSigns({ result }: { result: AnalysisResult }) {
 export function Recommendations({ result }: { result: AnalysisResult }) {
   const condition = CONDITIONS[result.primary.key];
   const groups: [string, string[]][] = [
-    ["Immediate action", condition.immediate],
+    ["Immediate Action", condition.immediate],
     ["Field management", condition.field],
     ["Monitoring", condition.monitoring],
   ];
