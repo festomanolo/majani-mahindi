@@ -1,3 +1,4 @@
+// analysis.tsx — analysis result page
 import { createFileRoute } from "@tanstack/react-router";
 import { Loader2, Leaf } from "lucide-react";
 import { PcShell } from "@/components/pc-shell";
