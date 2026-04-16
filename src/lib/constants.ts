@@ -19,7 +19,7 @@ export const MODEL_INPUT_SIZE = 224;
 export const SSE_RECONNECT_MS = 3000;
 
 /** Simulated connection delay in milliseconds */
-export const CONNECT_DELAY_MS = 1200;
+export const CONNECT_DELAY_MS = 1000;
 
 /** Minimum confidence % to show green instead of amber */
 export const HIGH_CONF_PCT = 80;
