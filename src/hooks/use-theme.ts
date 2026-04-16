@@ -13,6 +13,7 @@ function applyTheme(theme: Theme) {
   document.documentElement.classList.toggle("dark", resolved === "dark");
 }
 
+/** Manage and persist the UI colour theme across sessions */
 export function useTheme() {
   const [theme, setThemeState] = useState<Theme>(() => {
     try {
