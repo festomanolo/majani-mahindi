@@ -77,6 +77,6 @@ All notable changes to Majani Mahindi are documented here.
 
 ### Added
 - math.ts, string.ts, array.ts, object.ts utility libraries
-- formatNumber, formatPlural to format.ts
+- formatNumber (locale-aware), formatPlural to format.ts
 - repeat(), stdDev() utilities
 - CONTRIBUTING: security and feature request sections
