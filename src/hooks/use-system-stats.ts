@@ -8,6 +8,7 @@ export type SystemStats = {
   online: boolean;
 };
 
+/** Read static and reactive system capability metrics */
 export function useSystemStats(): SystemStats {
   const [online, setOnline] = useState(navigator.onLine);
 
