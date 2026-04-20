@@ -64,7 +64,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Rotate to a non-grass host crop for at least one season to break the pathogen spore cycle.",
       "Choose rust-resistant varieties for the next planting season.",
       "Remove and destroy heavily infected crop debris after harvest.",
-      "Avoid excessive nitrogen fertilisation — succulent tissue is more susceptible.",
+      "Avoid excessive nitrogen fertilisation — lush, succulent tissue is more susceptible to rust.",
     ],
     monitoring: [
       "Scout at least once per week from V6 onwards, especially during warm (16–23 °C), humid weather.",
