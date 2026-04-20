@@ -10,6 +10,7 @@ type Props = {
   hasPrev: boolean;
 };
 
+/** Previous/next pagination controls. Renders null if only one page. */
 export function PaginationBar({ page, totalPages, onPrev, onNext, hasNext, hasPrev }: Props) {
   if (totalPages <= 1) return null;
   return (
