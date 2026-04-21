@@ -1,6 +1,7 @@
 /**
  * Lightweight logger that suppresses output in production.
  */
+// Suppress all non-error logs in production
 const isDev = import.meta.env.DEV;
 
 export const logger = {
