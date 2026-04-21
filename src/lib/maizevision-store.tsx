@@ -82,7 +82,7 @@ const initialState: State = {
 
 function serialise(state: State): string {
   // Keep image payloads only for the newest samples so local storage stays small.
-  const samples = state.samples.map((s, i) => (i < 4 ? s : { ...s, imageUrl: leafSample }));
+  const samples = state.samples.map((s, i) => (i < 6 ? s : { ...s, imageUrl: leafSample }));
   return JSON.stringify({ ...state, samples });
 }
 
