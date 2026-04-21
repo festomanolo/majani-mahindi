@@ -225,7 +225,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
           // Animate stages visually while inference runs in background
           patchSample(id, { status: "analyzing", stage: 0 });
           for (let i = 0; i < STAGES.length; i++) {
-            await new Promise((r) => window.setTimeout(r, 450));
+            await new Promise((r) => window.setTimeout(r, 500));
             patchSample(id, { stage: i + 1 });
           }
           // Run real ONNX inference
