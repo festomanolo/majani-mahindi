@@ -59,7 +59,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Avoid spraying at tasselling to protect pollinators.",
     ],
     field: [
-      "Rotate to a non-host crop for at least one season to break the spore cycle.",
+      "Rotate to a non-grass host crop for at least one season to break the pathogen spore cycle.",
       "Choose rust-resistant varieties for the next planting season.",
       "Remove and destroy heavily infected crop debris after harvest.",
       "Avoid excessive nitrogen fertilisation — succulent tissue is more susceptible.",
