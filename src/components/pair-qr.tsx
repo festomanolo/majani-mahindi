@@ -1,3 +1,4 @@
+// pair-qr.tsx — generates QR code for phone pairing
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
