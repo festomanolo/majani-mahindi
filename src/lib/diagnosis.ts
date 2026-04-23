@@ -56,7 +56,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Heavily infected leaves may yellow and die back early",
     ],
     immediate: [
-      "Apply a registered foliar fungicide (triazole or strobilurin class) as soon as pustules appear on multiple plants.",
+      "Apply a registered foliar fungicide (triazole or strobilurin) as soon as pustules appear on multiple plants (≥5% plant incidence).",
       "Time application in the early morning to maximise spray retention and minimise evaporation.",
       "Avoid spraying during tasselling to protect pollinators and avoid pollen contamination.",
     ],
