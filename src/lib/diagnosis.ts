@@ -91,7 +91,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     ],
     field: [
       "Rotate to a non-grass crop for one or two seasons; the fungus persists in maize residue.",
-      "Till or incorporate infected residue deeply after harvest.",
+      "Deep-till (≥20 cm) or incorporate infected residue immediately after harvest to accelerate decomposition.",
       "Select NLB-tolerant hybrids, especially in high-humidity fields.",
       "Avoid overhead irrigation in the late afternoon or evening — prolonged leaf wetness overnight greatly favours infection.",
     ],
