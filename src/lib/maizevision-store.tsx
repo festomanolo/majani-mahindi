@@ -101,6 +101,7 @@ type Ctx = State & {
 
 const StoreContext = createContext<Ctx | null>(null);
 
+/** Root context provider for all MaizeVision state */
 export function MaizeVisionProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<State>(initialState);
   const [ready, setReady] = useState(false);
