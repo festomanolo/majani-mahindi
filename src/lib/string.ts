@@ -16,3 +16,8 @@ export function truncate(s: string, maxLen: number): string {
 export function padStart(s: string, len: number, fill = ' '): string {
   return s.padStart(len, fill);
 }
+
+/** Repeat a string n times */
+export function repeat(s: string, n: number): string {
+  return s.repeat(Math.max(0, n));
+}
