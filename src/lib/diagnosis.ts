@@ -255,8 +255,8 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
     }
   }
   const lapVar = lapCount > 0 ? lapSum / lapCount : 0;
-  // Reduced focus threshold from 200 → 150 — crops in field have softer edges
-  const focus = lapVar > 150;
+  // Focus: Laplacian variance > 120 — crops in field have naturally soft edges
+  const focus = lapVar > 120;
 
   // Leaf visibility: green channel dominance
   // Relaxed green dominance minimum from 45 → 35 for shaded leaves
