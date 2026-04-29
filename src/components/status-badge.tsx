@@ -9,6 +9,7 @@ const STATUS_LABELS: Record<SampleStatus, string> = {
   failed:    "Failed",
 };
 
+// Tailwind classes for each status badge variant
 const STATUS_COLORS: Record<SampleStatus, string> = {
   sending:   "bg-blue-500/15 text-blue-700 dark:text-blue-300",
   received:  "bg-amber-500/15 text-amber-700 dark:text-amber-300",
