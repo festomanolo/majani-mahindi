@@ -191,3 +191,8 @@
 @utility live-dot {
   animation: pulse-dot 1.8s ease-in-out infinite;
 }
+
+/* Print styles: hide nav and toasts */
+@media print {
+  nav, [data-sonner-toaster] { display: none !important; }
+}
