@@ -153,7 +153,7 @@ const CORN_INDICES: Record<number, ConditionKey> = {
   7:  "gray_leaf_spot",
   8:  "rust",
   9:  "blight",
-  10: "healthy",
+  10: "healthy",        // No disease detected
 };
 
 // If non-corn classes collectively score above this the image is probably not a maize leaf
