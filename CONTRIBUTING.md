@@ -19,7 +19,7 @@ npm install
 
 ## Code Style
 
-We use Prettier and ESLint. Run `npm run format` before committing.
+We use [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/). Run `npm run format` before committing.
 
 ## Pull Request Checklist
 
