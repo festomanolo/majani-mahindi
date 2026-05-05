@@ -25,6 +25,15 @@ export const en = {
     leafVisibility: "Leaf visibility",
     background: "Background",
   },
+  system: {
+    title: "System",
+    wasmSupported: "WASM Supported",
+    memory: "Device Memory",
+    cores: "CPU Cores",
+    online: "Network",
+    onlineYes: "Online",
+    onlineNo: "Offline",
+  },
   common: {
     loading: "Loading…",
     error: "Error",
