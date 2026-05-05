@@ -30,6 +30,9 @@ All notable changes to Majani Mahindi are documented here.
 - Transfer progress visible before auto-analyze starts
 - Simulated ONNX warm-up state exposed via event system
 
+### Removed
+- Large ONNX/WASM binaries from git tracking (use releases for downloads)
+
 ### Changed
 - Border radius token adjusted
 - Storage key bumped to v2
