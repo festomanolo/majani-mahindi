@@ -55,7 +55,7 @@ type State = {
 };
 
 export const STAGES = [
-  "Receiving image",
+  "Receiving image",  // stage 0
   "Image quality check",
   "Image preprocessing",
   "Feature analysis",  // stage 3
