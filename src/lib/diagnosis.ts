@@ -158,7 +158,7 @@ const CORN_INDICES: Record<number, ConditionKey> = {
 
 // If non-corn classes collectively score above this the image is probably not a maize leaf
 const NOT_MAIZE_THRESHOLD = 0.60;
-const LOW_CONF_THRESHOLD  = 50; // percent
+const LOW_CONF_THRESHOLD  = 45; // percent
 
 // ── ONNX session singleton ────────────────────────────────────────────────────
 ort.env.wasm.wasmPaths = "/";
