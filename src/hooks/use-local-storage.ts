@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
+/** Synchronise a React state value with a localStorage key */
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
