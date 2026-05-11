@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { getLocale, setLocale, type Locale } from "@/i18n";
 
+/** Read and change the active UI language */
 export function useLocale() {
   const [locale, setLocaleState] = useState<Locale>(getLocale);
 
