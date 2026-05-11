@@ -34,3 +34,13 @@ Please search existing issues before filing a new one. Include:
 - Expected vs actual behaviour
 - Browser/OS version
 - Console errors if any
+
+## Commit Messages
+
+We follow the [Conventional Commits](https://conventionalcommits.org) specification:
+
+```
+type(scope): short description
+```
+
+Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`.
