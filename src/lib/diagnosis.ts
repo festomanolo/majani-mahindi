@@ -110,7 +110,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     signs: [
       "Rectangular grey, tan, or brown lesions sharply bounded by leaf veins",
       "Lesions typically 1–6 cm long, parallel to the leaf midrib",
-      "Under humid conditions a fine grey powdery coating of conidia visible on lesion surface",
+      "Under high-humidity conditions a fine grey powdery coating of conidia may be visible on the lesion surface",
       "Lesions coalesce under heavy infection, causing large areas of leaf death",
     ],
     immediate: [
