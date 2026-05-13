@@ -129,6 +129,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
   },
 };
 
+// Single-class prediction with confidence score
 export type Prediction = { key: ConditionKey; name: string; confidence: number };
 
 export type AnalysisResult = {
