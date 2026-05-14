@@ -77,7 +77,7 @@ const initialState: State = {
   },
   samples: [],
   currentId: null,
-  autoAnalyze: false,
+  autoAnalyze: true,
 };
 
 function serialise(state: State): string {
