@@ -20,3 +20,6 @@ export const SSE_RECONNECT_MS = 4000;
 
 /** Simulated connection delay in milliseconds */
 export const CONNECT_DELAY_MS = 1200;
+
+/** Minimum confidence % to show green instead of amber */
+export const HIGH_CONF_PCT = 80;
