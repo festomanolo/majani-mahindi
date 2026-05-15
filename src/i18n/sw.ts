@@ -27,6 +27,15 @@ export const sw: I18nKeys = {
     leafVisibility: "Uonekano wa jani",
     background: "Mandhari nyuma",
   },
+  system: {
+    title: "Mfumo",
+    wasmSupported: "WASM Inasaidiwa",
+    memory: "Kumbukumbu ya Kifaa",
+    cores: "Viini vya CPU",
+    online: "Mtandao",
+    onlineYes: "Mtandaoni",
+    onlineNo: "Nje ya Mtandao",
+  },
   common: {
     loading: "Inapakia…",
     error: "Hitilafu",
