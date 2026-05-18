@@ -22,6 +22,7 @@ const NAV = [
   { to: "/system",   label: "System",    icon: SlidersHorizontal },
 ] as const;
 
+/** Desktop application shell with nav */
 export function PcShell({
   title,
   subtitle,
