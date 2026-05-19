@@ -90,7 +90,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Remove and bag (do not compost) severely infected lower leaves to reduce the local spore load.",
     ],
     field: [
-      "Rotate to a non-grass crop for one or two seasons; the fungus persists in maize residue.",
+      "Rotate to a non-grass crop for at least two seasons; E. turcicum survives on infected maize residue.",
       "Deep-till (≥20 cm) or incorporate infected residue immediately after harvest to accelerate decomposition.",
       "Select NLB-tolerant hybrids, especially in high-humidity fields.",
       "Avoid overhead irrigation in the late afternoon or evening — prolonged leaf wetness overnight greatly favours infection.",
