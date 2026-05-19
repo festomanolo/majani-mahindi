@@ -126,7 +126,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     monitoring: [
       "Scout from V10 to tasselling in fields with high residue or a history of gray leaf spot.",
       "Record the number of lesions on the ear leaf and the leaf above it.",
-      "Re-check 10–14 days after a fungicide application to evaluate disease progression.",
+      "Re-check the crop 10–14 days after each fungicide application to evaluate disease progression and need for a follow-up spray.",
     ],
   },
 };
