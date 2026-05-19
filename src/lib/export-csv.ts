@@ -1,5 +1,6 @@
 import type { Sample } from "./maizevision-store";
 
+// Column headers for the exported CSV file
 const CSV_HEADERS = ["Sample ID", "Date", "Device", "Condition", "Confidence (%)", "Quality"];
 
 function escapeCsv(val: string): string {
