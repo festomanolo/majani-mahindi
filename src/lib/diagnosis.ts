@@ -31,7 +31,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "No lesions, spots, pustules, or necrotic areas",
       "Leaf shape and surface texture consistent with the healthy reference standard",
     ],
-    immediate: ["No corrective action is required for this sample. Monitor surrounding plants as a precaution."],
+    immediate: ["No corrective action required. Continue monitoring surrounding plants as a precaution."],
     field: [
       "Maintain the current fertiliser and integrated crop-protection programme.",
       "Continue routine scouting across different sections of the field.",
