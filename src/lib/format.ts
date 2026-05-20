@@ -29,3 +29,7 @@ export function formatRelative(ts: number): string {
 export function formatDate(ts: number): string {
   return new Date(ts).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
 }
+
+export function formatNumber(n: number, locale = 'en-US'): string {
+  return new Intl.NumberFormat(locale).format(n);
+}
