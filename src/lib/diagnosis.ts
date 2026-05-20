@@ -153,7 +153,7 @@ const IMAGENET_STD  = [0.229, 0.224, 0.225];
 const CORN_INDICES: Record<number, ConditionKey> = {
   7:  "gray_leaf_spot",
   8:  "rust",
-  9:  "blight",
+  9:  "blight",         // Exserohilum turcicum
   10: "healthy",        // No disease detected
 };
 
