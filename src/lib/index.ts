@@ -4,3 +4,4 @@ export { formatTime } from "./maizevision-store";
 export { samplesToCSV, downloadCSV } from "./export-csv";
 export { computeStats } from "./report-stats";
 export * from "./constants";
+export { buildUrl, getQueryParam } from "./url";
