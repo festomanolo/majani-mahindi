@@ -170,7 +170,7 @@ const NOT_MAIZE_THRESHOLD = 0.58; // conservative: flag ambiguous images
 const LOW_CONF_THRESHOLD  = 48; // percent
 
 // ── ONNX session singleton ────────────────────────────────────────────────────
-// WASM files are served from the public root
+// WASM assets are served from the public directory root (Vite copies them there)
 ort.env.wasm.wasmPaths = "/";
 
 let sessionPromise: Promise<ort.InferenceSession> | null = null;
