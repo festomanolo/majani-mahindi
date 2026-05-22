@@ -46,6 +46,9 @@ All notable changes to Majani Mahindi are documented here.
 - Focus Laplacian threshold reduced from 200 → 150 for field images
 - Green-dominance threshold relaxed for shaded leaf images
 - Sample ID suffix widened from 3 to 4 digits
+- In-memory sample limit raised to 50
+- Stage animation delay reduced to 400ms
+- Transfer progress steps increased for visibility
 
 ## [0.3.0] — 2026-09-29
 
