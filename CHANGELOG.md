@@ -15,7 +15,7 @@ All notable changes to Majani Mahindi are documented here.
 - Keyboard shortcut hook
 - System stats hook
 - Report stats utility
-- useTheme, useLocale, useDebounce, useInterval, useEventListener, useKeyboardShortcut hooks
+- useTheme, useLocale, useDebounce, useInterval, useEventListener, useKeyboardShortcut, usePagination, useSystemStats, useWarmupState, useLocalStorage hooks
 - EmptyState, Spinner, CopyButton, StatusBadge, SectionHeader UI components
 - ErrorBoundary component
 - GitHub Actions CI workflow (lint, build, typecheck)
