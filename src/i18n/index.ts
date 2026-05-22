@@ -7,6 +7,7 @@ export const locales: Record<Locale, typeof en> = { en, sw };
 
 const STORAGE_KEY = "maizevision.locale";
 
+/** Read the stored locale, falling back to browser language detection */
 export function getLocale(): Locale {
   try {
     const stored = localStorage.getItem(STORAGE_KEY) as Locale;
