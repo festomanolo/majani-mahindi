@@ -209,3 +209,9 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Focus ring override for interactive elements */
+:focus-visible {
+  outline: 2px solid oklch(0.41 0.088 148);
+  outline-offset: 2px;
+}
