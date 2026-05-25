@@ -71,7 +71,7 @@ const initialState: State = {
     status: "disconnected",
     pcName: "STATION-01",
     phoneName: "Field scanner",
-    network: "MaizeVision-Local",
+    network: "MaizeVision-LAN",
     address: "loading...",
     code: "487 214",
   },
