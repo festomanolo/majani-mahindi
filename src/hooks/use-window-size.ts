@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-/** Track live window inner dimensions, updated on resize */
+/** Reactive window dimensions — re-renders on browser resize */
 export function useWindowSize() {
   const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
   useEffect(() => {
