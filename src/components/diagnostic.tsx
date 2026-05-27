@@ -16,7 +16,7 @@ export function ConfidenceBar({ value, tone }: { value: number; tone?: "low" }) 
           style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
         />
       </div>
-      <div className="mt-2 flex justify-between font-mono text-[11px] text-muted-foreground">
+      <div aria-label={label} className="mt-2 flex justify-between font-mono text-[11px] text-muted-foreground">
         <span>0</span>
         <span>50</span>
         <span>100</span>
