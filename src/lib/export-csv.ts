@@ -29,6 +29,8 @@ export function downloadCSV(csv: string, filename = "maizevision-export.csv") {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
+  a.style.display = "none";
+  document.body.appendChild(a);
   a.download = filename;
   a.click();
   URL.revokeObjectURL(url);
