@@ -25,7 +25,9 @@ export function samplesToCSV(samples: Sample[]): string {
 }
 
 export function downloadCSV(csv: string, filename = "maizevision-export.csv") {
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  // BOM makes Excel on Windows open the file with correct encoding
+          const bom = "\uFEFF";
+          const blob = new Blob([bom + csv], { type: "text/csv;charset=utf-8;" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
