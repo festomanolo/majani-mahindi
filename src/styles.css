@@ -225,3 +225,6 @@
   to   { transform: translateY(100vh); }
 }
 .scan-sweep { animation: scan-sweep 2s linear infinite; }
+
+/* Smooth scrolling site-wide */
+html { scroll-behavior: smooth; }
