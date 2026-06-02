@@ -94,7 +94,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Avoid overhead irrigation late in the day — prolonged leaf wetness favours infection.",
     ],
     monitoring: [
-      "Scout twice weekly from V8 onwards, focusing on the ear leaf and leaves above it.",
+      "Scout twice weekly from the V8 stage onwards, focusing on the ear leaf and the two leaves above it.",
       "Record lesion count per plant and percentage of leaf area affected.",
       "If lesions reach the ear leaf before silking, a second fungicide pass in 14 days may be warranted.",
     ],
