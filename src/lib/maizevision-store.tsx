@@ -37,6 +37,7 @@ export type Sample = {
   saved?: boolean;
 };
 
+// Current state of the mobile device connection
 export type Connection = {
   status: ConnectionStatus;
   pcName: string;
