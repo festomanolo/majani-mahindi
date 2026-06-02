@@ -81,7 +81,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     signs: [
       "Elongated (2–15 cm) grey-green to tan lesions running parallel to veins",
       "Lesions have a characteristic 'cigar' or spindle shape",
-      "Dark-olive sporulation visible in the lesion centre under humid conditions",
+      "Dark-olive to brown sporulation visible in the lesion centre during periods of high humidity",
       "Disease progresses from lower leaves upward; ear-leaf infection causes most yield loss",
     ],
     immediate: [
