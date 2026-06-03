@@ -20,6 +20,7 @@ const UploadSchema = z.object({
  * The server import is done dynamically so the module only resolves on the
  * server — it is never bundled into the client.
  */
+// upload-fn.ts — handles image upload from phone
 export const uploadLeafFn = createServerFn({ method: "POST" })
   .validator((data: unknown) => UploadSchema.parse(data))
   .handler(async ({ data }) => {
