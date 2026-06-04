@@ -63,6 +63,7 @@ export function StatusDot({
   );
 }
 
+/** Key-value field for metadata grids */
 export function Field({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <div className="min-w-0">
