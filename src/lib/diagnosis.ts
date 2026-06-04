@@ -50,7 +50,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     summary:
       "Puccinia sorghi infection producing cinnamon-brown pustules scattered over both leaf surfaces.",
     signs: [
-      "Small oval-to-elongated cinnamon-brown pustules on upper and lower leaf surface",
+      "Small oval to elongated cinnamon-brown pustules visible on both upper and lower leaf surfaces",
       "Pustules rupture to release powdery rust-coloured spores",
       "Pustules surrounded by a faint yellow halo",
       "Heavily infected leaves may yellow and die back early",
