@@ -256,3 +256,13 @@ html {
 
 /* Better default for images to avoid layout shift */
 img { display: block; max-width: 100%; }
+
+/* Dark mode token overrides */
+.dark {
+  --background: oklch(0.14 0.01 200);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.18 0.01 200);
+  --border: oklch(0.28 0.01 200);
+  --muted-foreground: oklch(0.60 0 0);
+  --primary: oklch(0.55 0.12 148);
+}
