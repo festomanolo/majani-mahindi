@@ -25,3 +25,7 @@ export function formatRelative(ts: number): string {
   if (diff < 86_400_000) return `${Math.floor(diff / 3_600_000)} hr ago`;
   return formatDate(ts);
 }
+
+export function formatDate(ts: number): string {
+  return new Date(ts).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
+}
