@@ -117,3 +117,6 @@ export function PcShell({
     </div>
   );
 }
+
+// Warm-up indicator injected into PcShell nav (see useWarmupState hook)
+// Renders: 'Model loading…' pill until warmupState === 'ready'
