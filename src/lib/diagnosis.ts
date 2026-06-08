@@ -112,7 +112,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Lesions coalesce under heavy infection, causing large areas of leaf death",
     ],
     immediate: [
-      "Apply a strobilurin or triazole fungicide at the first appearance of lesions — the ear leaf is the critical target.",
+      "Apply a registered strobilurin or triazole fungicide at first appearance of lesions — protecting the ear leaf is the critical priority.",
       "Prioritise fields with a history of gray leaf spot or continuous maize cropping.",
     ],
     field: [
