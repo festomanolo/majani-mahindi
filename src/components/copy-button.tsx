@@ -5,7 +5,8 @@ import { cn } from "@/lib/utils";
 export function CopyButton({ text, className }: { text: string; className?: string }) {
   const [copied, setCopied] = useState(false);
 
-  const copy = useCallback(async () => {
+  // Write text to clipboard and show a transient check icon
+    const copy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
