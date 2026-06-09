@@ -61,7 +61,7 @@ export const STAGES = [
   "Image preprocessing",
   "Feature analysis",  // stage 3
   "Classification",
-  "Recommendation",
+  "Recommendation",  // stage 5
 ];
 
 const STORAGE_KEY = "maizevision.state.v1";
