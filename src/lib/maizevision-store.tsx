@@ -295,6 +295,7 @@ export function useMaizeVision() {
   return ctx;
 }
 
+/** Format a Unix ms timestamp into a locale-aware string */
 export function formatTime(ts: number) {
   return new Date(ts).toLocaleString(undefined, {
     day: "2-digit",
