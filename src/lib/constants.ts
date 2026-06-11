@@ -23,3 +23,6 @@ export const CONNECT_DELAY_MS = 1200;
 
 /** Minimum confidence % to show green instead of amber */
 export const HIGH_CONF_PCT = 80;
+
+/** Number of items shown in the dashboard recent-scans list */
+export const DASHBOARD_RECENT_COUNT = 5;
