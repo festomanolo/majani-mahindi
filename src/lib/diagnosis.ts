@@ -261,7 +261,7 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
 
   // Leaf visibility: green channel dominance
   // Leaf visibility: require slight green dominance and minimum brightness
-  const visibility = avgG > avgR * 1.02 && avgG > avgB * 1.02 && avgG > 32;
+  const visibility = avgG > avgR * 1.03 && avgG > avgB * 1.03 && avgG > 35;
 
   // weight: lighting and focus matter more than green dominance
   const passCount = [lighting, focus, visibility].filter(Boolean).length;
