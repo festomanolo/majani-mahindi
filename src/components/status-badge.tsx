@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { SampleStatus } from "@/lib/maizevision-store";
 
+// Human-readable labels for each sample lifecycle stage
 const STATUS_LABELS: Record<SampleStatus, string> = {
   sending:   "Receiving",
   received:  "Ready",
