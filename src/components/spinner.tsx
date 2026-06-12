@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 
+/** Accessible loading spinner with size variants (sm/md/lg) */
 export function Spinner({ className, size = "md" }: { className?: string; size?: "sm" | "md" | "lg" }) {
   return (
     <div
