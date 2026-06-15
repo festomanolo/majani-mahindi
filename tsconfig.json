@@ -18,7 +18,7 @@
     "noImplicitReturns": true,
     "strict": true,
     "noUncheckedIndexedAccess": true, // catches array[i] undefined
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
