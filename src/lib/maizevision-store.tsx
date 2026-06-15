@@ -11,6 +11,7 @@ import {
 import { runInference, prewarmModel, type AnalysisResult } from "./diagnosis";
 import leafSample from "@/assets/leaf-sample.jpg";
 
+// Possible states of the phone-to-PC connection
 export type ConnectionStatus = "disconnected" | "searching" | "connecting" | "connected";
 
 export type SampleStatus = "sending" | "received" | "analyzing" | "complete" | "failed";
