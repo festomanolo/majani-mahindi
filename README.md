@@ -28,6 +28,8 @@ npm install
 npm run dev
 ```
 
+The dev server runs on `http://localhost:3000` by default.
+
 ## Model
 
 > ResNet50 trained on PlantVillage (38 classes, macro-F1 0.9865).
