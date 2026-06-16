@@ -8,6 +8,7 @@ type Props = {
   className?: string;
 };
 
+/** Page or card section heading with optional subtitle and action slot */
 export function SectionHeader({ title, subtitle, action, className }: Props) {
   return (
     <div className={cn("flex items-start justify-between gap-4", className)}>
