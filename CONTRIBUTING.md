@@ -44,3 +44,7 @@ type(scope): short description
 ```
 
 Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`.
+
+## Reporting a Security Issue
+
+Do not open a public GitHub issue for security vulnerabilities. Email the maintainer directly.
