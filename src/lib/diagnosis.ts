@@ -120,7 +120,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     field: [
       "Rotate to a non-grass crop; the fungus survives in infected crop residue on the soil surface.",
       "Till to bury residue and reduce the initial inoculum for the next season.",
-      "Plant resistant hybrids wherever available — host resistance is the most cost-effective long-term control.",
+      "Plant resistant or tolerant hybrids wherever available — host plant resistance is the most cost-effective long-term control strategy.",
       "Avoid minimum-till in fields with high residue levels and a history of the disease.",
     ],
     monitoring: [
