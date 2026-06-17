@@ -24,6 +24,7 @@ export type ImageQuality = {
   background: boolean;
 };
 
+// A captured and optionally analysed leaf scan
 export type Sample = {
   id: string;
   imageUrl: string;
