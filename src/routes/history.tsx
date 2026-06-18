@@ -1,3 +1,4 @@
+// history.tsx — scan history list
 import { createFileRoute } from "@tanstack/react-router";
 import { Leaf } from "lucide-react";
 import { PcShell } from "@/components/pc-shell";
