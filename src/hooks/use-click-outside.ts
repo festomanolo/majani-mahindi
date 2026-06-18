@@ -1,6 +1,6 @@
 import { useEffect, type RefObject } from "react";
 
-/** Fire a callback when the user clicks outside the referenced element */
+/** Detect clicks that land outside a referenced DOM element */
 export function useClickOutside<T extends HTMLElement>(ref: RefObject<T>, handler: () => void) {
   useEffect(() => {
     const fn = (e: MouseEvent) => {
