@@ -92,7 +92,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     field: [
       "Rotate to a non-grass crop for at least two seasons; E. turcicum survives on infected maize residue.",
       "Deep-till (≥20 cm) or incorporate infected residue immediately after harvest to accelerate decomposition.",
-      "Select NLB-tolerant hybrids, especially in high-humidity fields.",
+      "Select NLB-tolerant or resistant hybrids, particularly in fields with a history of the disease or high rainfall.",
       "Avoid overhead irrigation in the late afternoon or evening — prolonged leaf wetness overnight greatly favours infection.",
     ],
     monitoring: [
