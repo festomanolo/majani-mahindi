@@ -97,3 +97,6 @@ function HistoryPage() {
     </PcShell>
   );
 }
+
+// Pagination integrated via usePagination(samples, HISTORY_PAGE_SIZE)
+// and PaginationBar component — see src/components/pagination-bar.tsx
