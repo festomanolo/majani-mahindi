@@ -63,3 +63,8 @@ export function computeStats(samples: Sample[]): ReportStats {
     lastWeek,
   };
 }
+
+/** Return the most common condition key, or null if no completed samples */
+export function topCondition(stats: ReportStats): string | null {
+  return stats.byCondition[0]?.name ?? null;
+}
