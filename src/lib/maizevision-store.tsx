@@ -269,7 +269,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
         // Brief delay so the UI can render 'received' state before analysis starts
           window.setTimeout(() => {
           if (autoRef.current) startAnalysis(id);
-        }, 500);
+        }, 400);
       }, 1250);
 
       return id;
