@@ -20,6 +20,7 @@ const CONDITION_NAMES: Record<ConditionKey, string> = {
   gray_leaf_spot: "Gray Leaf Spot",
 };
 
+/** Get the Unix ms timestamp for the start of Monday (or N weeks ago) */
 function weekStart(offset = 0): number {
   const d = new Date();
   d.setHours(0, 0, 0, 0);
