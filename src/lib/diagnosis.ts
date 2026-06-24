@@ -124,7 +124,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Avoid minimum-till in fields with high residue levels and a history of the disease.",
     ],
     monitoring: [
-      "Scout from V10 to tasselling in fields with high residue or a history of gray leaf spot.",
+      "Scout twice weekly from V10 to tasselling in fields with significant residue loads or a history of gray leaf spot.",
       "Record the number of lesions per leaf on the ear leaf and the two leaves directly above it.",
       "Re-check the crop 10–14 days after each fungicide application to evaluate disease progression and need for a follow-up spray.",
     ],
