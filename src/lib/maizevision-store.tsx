@@ -122,7 +122,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
       /* ignore corrupted state */
     }
     setReady(true);
-    // Pre-load the ONNX model so the first scan doesn't stall
+    // Pre-load the ONNX model so the first scan doesn't incur a cold-start delay
     prewarmModel();
 
     // Resolve the real LAN address from the Vite-injected constant so the QR
