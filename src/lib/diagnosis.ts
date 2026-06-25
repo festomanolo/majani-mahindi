@@ -162,6 +162,7 @@ const NOT_MAIZE_THRESHOLD = 0.60;
 const LOW_CONF_THRESHOLD  = 45; // percent
 
 // ── ONNX session singleton ────────────────────────────────────────────────────
+// WASM files are served from the public root
 ort.env.wasm.wasmPaths = "/";
 
 let sessionPromise: Promise<ort.InferenceSession> | null = null;
