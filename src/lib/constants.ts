@@ -20,6 +20,7 @@ export const MODEL_INPUT_SIZE = 224;
 export const SSE_RECONNECT_MS = 3000;
 
 /** Simulated connection delay in milliseconds */
+/** Delay (ms) before showing connection success */
 export const CONNECT_DELAY_MS = 1200;
 
 /** Confidence % threshold above which the result badge is shown in green */
