@@ -1,0 +1,36 @@
+# Changelog
+
+All notable changes to Majani Mahindi are documented here.
+
+## [Unreleased]
+
+### Added
+- Dark mode support with system preference detection
+- Swahili (sw) localisation scaffold
+- CSV export for scan results
+- Pagination hook for history list
+- Processing time breakdown component
+- Keyboard shortcut hook
+- System stats hook
+- Report stats utility
+- useTheme, useLocale, useDebounce, useInterval, useEventListener, useKeyboardShortcut hooks
+- EmptyState, Spinner, CopyButton, StatusBadge, SectionHeader UI components
+- ErrorBoundary component
+- GitHub Actions CI workflow (lint, build, typecheck)
+- CONTRIBUTING.md
+- .editorconfig
+- .nvmrc
+
+### Fixed
+- Confidence bar animation jitter (will-change: width)
+- Retry button now resets stage progress
+- Image quality lighting threshold lowered for overcast shots
+- Transfer progress visible before auto-analyze starts
+- Simulated ONNX warm-up state exposed via event system
+
+### Changed
+- Border radius token adjusted
+- Storage key bumped to v2
+- Broadcast channel name bumped to v2
+- Default PC name updated to STATION-01
+- Low-confidence threshold adjusted to 45%
