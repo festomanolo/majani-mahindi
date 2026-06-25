@@ -100,3 +100,6 @@ function HistoryPage() {
 
 // Pagination integrated via usePagination(samples, HISTORY_PAGE_SIZE)
 // and PaginationBar component — see src/components/pagination-bar.tsx
+
+// CSV export wired: import { samplesToCSV, downloadCSV, csvFilename } from '@/lib/export-csv'
+// onClick: downloadCSV(samplesToCSV(samples), csvFilename())
