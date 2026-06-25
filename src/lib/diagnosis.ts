@@ -109,7 +109,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Cercospora zeae-maydis infection producing rectangular grey-to-tan lesions bounded by leaf veins.",
     signs: [
       "Rectangular grey, tan, or brown lesions sharply bounded by leaf veins",
-      "Lesions typically 1–6 cm long, parallel to the leaf midrib",
+      "Lesions typically 1–8 cm long, oriented parallel to the leaf midrib",
       "Under high-humidity conditions a fine grey powdery coating of conidia may be visible on the lesion surface",
       "Lesions coalesce under heavy infection, causing large areas of leaf death",
     ],
