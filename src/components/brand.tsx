@@ -40,6 +40,7 @@ export function Wordmark({ subtitle, compact }: { subtitle?: string; compact?: b
   );
 }
 
+/** Animated status dot with tone variants */
 export function StatusDot({
   tone = "neutral",
   live,
