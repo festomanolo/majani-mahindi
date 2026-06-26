@@ -117,7 +117,10 @@
   --sidebar-ring: oklch(0.41 0.088 148);
 }
 
-@layer base {
+}
+
+/* Dark mode class applied by useTheme hook */
+.dark { color-scheme: dark; }
   * {
     border-color: var(--color-border);
   }
