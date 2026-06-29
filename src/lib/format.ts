@@ -33,3 +33,7 @@ export function formatDate(ts: number): string {
 export function formatNumber(n: number, locale = 'en-US'): string {
   return new Intl.NumberFormat(locale).format(n);
 }
+
+export function formatPlural(n: number, singular: string, plural: string): string {
+  return `${n} ${n === 1 ? singular : plural}`;
+}
