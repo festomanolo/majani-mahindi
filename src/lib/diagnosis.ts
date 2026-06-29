@@ -84,7 +84,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     ],
     immediate: [
       "Apply a registered fungicide (triazole or strobilurin) when lesions first appear on lower leaves.",
-      "Do not delay: yield losses increase sharply if the ear leaf is infected before silking.",
+      "Do not delay treatment: yield losses increase sharply if the ear leaf becomes infected before silking.",
       "Remove and bag severely infected lower leaves to reduce the local spore load.",
     ],
     field: [
