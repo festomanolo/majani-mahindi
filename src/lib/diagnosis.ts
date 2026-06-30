@@ -65,7 +65,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Avoid excessive nitrogen fertilisation — succulent tissue is more susceptible.",
     ],
     monitoring: [
-      "Scout weekly from V6 onwards, especially during warm (16–23 °C), humid weather.",
+      "Scout at least once per week from V6 onwards, especially during warm (16–23 °C), humid weather.",
       "Count pustules per leaf and record percentage of leaf area affected.",
       "A second fungicide application is often needed 14–21 days after the first if conditions remain favourable.",
     ],
