@@ -1,4 +1,4 @@
-/** Create a new object with only the specified keys from the source */
+/** Select specific keys from obj into a new object */
 export function pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
   return keys.reduce((acc, key) => ({ ...acc, [key]: obj[key] }), {} as Pick<T, K>);
 }
