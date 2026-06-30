@@ -227,4 +227,7 @@
 .scan-sweep { animation: scan-sweep 2s linear infinite; }
 
 /* Smooth scrolling site-wide */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
