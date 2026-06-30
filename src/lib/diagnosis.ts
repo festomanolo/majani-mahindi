@@ -231,6 +231,7 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
   // Leaf visibility: green channel dominance
   const visibility = avgG > avgR * 1.05 && avgG > avgB * 1.05 && avgG > 45;
 
+  // weight: lighting and focus matter more than green dominance
   const passCount = [lighting, focus, visibility].filter(Boolean).length;
   const overall: "Good" | "Fair" | "Low" =
     passCount === 3 ? "Good" : passCount === 2 ? "Fair" : "Low";
