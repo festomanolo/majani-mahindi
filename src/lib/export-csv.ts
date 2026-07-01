@@ -3,6 +3,7 @@ import type { Sample } from "./maizevision-store";
 // Column headers for the exported CSV file
 const CSV_HEADERS = ["Sample ID", "Date", "Device", "Condition", "Confidence (%)", "Quality"];
 
+/** Wrap a CSV field value in quotes if it contains commas, quotes, or newlines */
 function escapeCsv(val: string): string {
   if (val.includes(",") || val.includes('"') || val.includes("\n")) {
     return `"${val.replace(/"/g, '""')}"`;
