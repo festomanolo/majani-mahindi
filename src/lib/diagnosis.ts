@@ -146,6 +146,7 @@ export const MODEL_VERSION = "ResNet50 · CropGuard · PlantVillage";
 export const DATASET = "PlantVillage · 38 classes · leaf-grouped split";
 
 // ── ImageNet normalisation constants ─────────────────────────────────────────
+// ImageNet RGB channel means used for ResNet normalisation
 const IMAGENET_MEAN = [0.485, 0.456, 0.406];
 const IMAGENET_STD  = [0.229, 0.224, 0.225];
 
