@@ -231,3 +231,8 @@ html {
   scroll-behavior: smooth;
   text-size-adjust: 100%;
 }
+
+/* Scrollbar styling for webkit */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: oklch(0.7 0 0 / 0.4); border-radius: 3px; }
