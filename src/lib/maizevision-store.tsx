@@ -16,6 +16,7 @@ export type ConnectionStatus = "disconnected" | "searching" | "connecting" | "co
 
 export type SampleStatus = "sending" | "received" | "analyzing" | "complete" | "failed";
 
+// Quality assessment carried alongside every sample
 export type ImageQuality = {
   overall: "Good" | "Fair" | "Low";
   lighting: boolean;
