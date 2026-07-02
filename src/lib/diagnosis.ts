@@ -52,7 +52,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     signs: [
       "Small oval to elongated cinnamon-brown pustules visible on both upper and lower leaf surfaces",
       "Pustules rupture to release powdery rust-coloured spores",
-      "Pustules surrounded by a faint yellow halo",
+      "Individual pustules are often surrounded by a faint chlorotic (yellow) halo",
       "Heavily infected leaves may yellow and die back early",
     ],
     immediate: [
