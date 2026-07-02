@@ -14,7 +14,7 @@ export function ConfidenceBar({ value, tone, label }: { value: number; tone?: "l
             "h-full rounded-full transition-[width] duration-600",
             tone === "low" ? "bg-warning" : "bg-primary",
           )}
-          style={{ width: `${Math.min(100, Math.max(0, value))}%`, willChange: 'width' }}
+          style={{ width: `${Math.min(100, Math.max(0, value))}%`, willChange: 'width', transform: 'translateZ(0)' }}
         />
       </div>
       <div aria-label={label} className="mt-2 flex justify-between font-mono text-[11px] text-muted-foreground">
