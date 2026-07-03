@@ -1,6 +1,6 @@
 {
   "name": "majani-mahindi",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "keywords": ["maize", "disease", "onnx", "ai", "agriculture", "swahili"],
   "repository": {"type": "git", "url": "https://github.com/festomanolo/majani-mahindi.git"},
   "description": "Local-network maize leaf disease scanner with on-device ONNX inference and Swahili support",
