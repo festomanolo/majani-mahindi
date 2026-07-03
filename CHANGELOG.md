@@ -40,6 +40,11 @@ All notable changes to Majani Mahindi are documented here.
 - Default PC name updated to STATION-01
 - Low-confidence threshold adjusted to 45%
 
+## [0.3.0] — 2026-09-29
+
+### Added
+- See unreleased section above — promoted to 0.3.0
+
 ## [0.1.0] — 2026-04-01
 
 ### Added
