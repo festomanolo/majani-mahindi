@@ -145,6 +145,7 @@ export type AnalysisResult = {
   notMaize?: boolean;
 };
 
+/** Human-readable model identifier shown in the UI */
 export const MODEL_VERSION = "ResNet50 · CropGuard · PlantVillage";
 /** Training dataset description */
 export const DATASET = "PlantVillage · 38 classes · leaf-grouped split";
