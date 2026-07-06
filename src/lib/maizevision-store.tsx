@@ -77,7 +77,7 @@ const initialState: State = {
     phoneName: "Field scanner",
     network: "MaizeVision-LAN",
     address: "loading...",
-    code: "487 214",
+    code: "394 871",
   },
   samples: [],
   currentId: null,
