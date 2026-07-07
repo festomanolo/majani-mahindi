@@ -247,7 +247,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
   const sendSample = useCallback(
     (input: { imageUrl: string; quality: ImageQuality }) => {
       const id = `MZ-${new Date().toISOString().slice(2, 10).replace(/-/g, "")}-${String(
-        Math.floor(Math.random() * 900 + 100),
+        Math.floor(Math.random() * 9000 + 1000),
       )}`;
       const sample: Sample = {
         id,
