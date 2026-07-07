@@ -10,7 +10,7 @@ export function ConfidenceBar({ value, tone }: { value: number; tone?: "low" }) 
       <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
         <div
           className={cn(
-            "h-full rounded-full transition-[width] duration-700",
+            "h-full rounded-full transition-[width] duration-500",
             tone === "low" ? "bg-warning" : "bg-primary",
           )}
           style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
