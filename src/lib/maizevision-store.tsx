@@ -255,7 +255,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
         stage: 0,
         transfer: 0,
       };
-      update((s) => ({ ...s, samples: [sample, ...s.samples].slice(0, 24), currentId: id }));
+      update((s) => ({ ...s, samples: [sample, ...s.samples].slice(0, 30), currentId: id }));
 
       [10, 35, 65, 85, 100].forEach((pct, i) => {
         window.setTimeout(() => patchSample(id, { transfer: pct }), 220 * (i + 1));
