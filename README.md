@@ -10,6 +10,10 @@ React 19, Tailwind v4, and ONNX Runtime Web.
 - 🌿 Detects: Healthy, Common Rust, Northern Leaf Blight, Gray Leaf Spot
 - 📊 Full diagnosis report with recommended actions
 
+## Contributing
+
+Pull requests welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
 ## License
 
 MIT
