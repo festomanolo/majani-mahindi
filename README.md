@@ -15,7 +15,7 @@ React 19, Tailwind v4, and ONNX Runtime Web.
 
 ## Requirements
 
-Node.js 20+, a modern Chromium browser (Chrome 112+ or Edge 112+) for full WASM SIMD support.
+Node.js 20+, Chrome 112+, Edge 112+, or any browser with WASM SIMD support.
 
 ## Quick Start
 
