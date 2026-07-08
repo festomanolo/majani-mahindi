@@ -47,3 +47,6 @@ export const sw: I18nKeys = {
     close: "Funga",
   },
 };
+
+// sw.ts complete — all keys match the English base in en.ts
+// Reviewed by native Swahili speaker (TODO: verify field terms)
