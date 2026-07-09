@@ -23,7 +23,10 @@ const NAV = [
   { to: "/system",   label: "System",    icon: SlidersHorizontal },
 ] as const;
 
-/** Desktop application shell with nav */
+/**
+ * Desktop application chrome: top nav, page header, and content area.
+ * Wraps every PC-side route.
+ */
 export function PcShell({
   title,
   subtitle,
