@@ -25,7 +25,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     summary: "No disease or deficiency pattern detected. The leaf shows normal, vigorous growth.",
     signs: [
       "Uniform mid-to-deep green coloration across the entire blade",
-      "Veins and interveinal tissue equally coloured",
+      "Veins and interveinal tissue are equally coloured with no discolouration",
       "No lesions, spots, pustules, or necrotic areas",
       "Leaf shape and texture match the healthy reference image",
     ],
