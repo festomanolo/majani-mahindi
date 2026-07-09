@@ -1,3 +1,4 @@
+// system.tsx — system diagnostics page
 import { createFileRoute } from "@tanstack/react-router";
 import { PcShell } from "@/components/pc-shell";
 import { Field } from "@/components/brand";
