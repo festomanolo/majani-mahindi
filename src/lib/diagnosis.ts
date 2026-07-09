@@ -178,8 +178,28 @@ function getSession(): Promise<ort.InferenceSession> {
 }
 
 /** Pre-load ONNX session to reduce first-scan latency */
+export type WarmupState = "idle" | "warming" | "ready" | "error";
+let warmupState: WarmupState = "idle";
+const warmupListeners: Array<(s: WarmupState) => void> = [];
+
+export function onWarmupChange(fn: (s: WarmupState) => void) {
+  warmupListeners.push(fn);
+  return () => { const i = warmupListeners.indexOf(fn); if (i >= 0) warmupListeners.splice(i, 1); };
+}
+
+function setWarmup(s: WarmupState) {
+  warmupState = s;
+  warmupListeners.forEach((fn) => fn(s));
+}
+
+export function getWarmupState() { return warmupState; }
+
 export function prewarmModel(): void {
-  getSession().catch(() => { sessionPromise = null; });
+  if (warmupState !== "idle") return;
+  setWarmup("warming");
+  getSession()
+    .then(() => setWarmup("ready"))
+    .catch(() => { sessionPromise = null; setWarmup("error"); });
 }
 
 // ── Image quality analysis ────────────────────────────────────────────────────
