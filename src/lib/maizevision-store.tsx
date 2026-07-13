@@ -284,7 +284,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
       startAnalysis,
       markSaved: (id) => patchSample(id, { saved: true }),
       clearCurrent: () => update((s) => ({ ...s, currentId: null })),
-      retry: (id) => startAnalysis(id),
+      retry: (id) => { patchSample(id, { status: 'received', stage: 0, error: undefined }); startAnalysis(id); },
     }),
     [state, ready, connect, disconnect, sendSample, startAnalysis, patchSample, update],
   );
