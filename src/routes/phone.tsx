@@ -301,3 +301,7 @@ function PhoneScanner() {
     </div>
   );
 }
+
+// Camera constraint: facingMode 'environment' requests rear camera on iOS/Android
+// Falls back to any available camera if rear is unavailable
+// See: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode
