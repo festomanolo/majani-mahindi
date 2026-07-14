@@ -15,8 +15,8 @@ export const NOT_MAIZE_PROB = 0.62;
 /** ONNX model input resolution */
 export const MODEL_INPUT_SIZE = 224;
 
-/** SSE reconnect delay in milliseconds */
-export const SSE_RECONNECT_MS = 4000;
+/** SSE reconnect delay in milliseconds (3 s in normal operation) */
+export const SSE_RECONNECT_MS = 3000;
 
 /** Simulated connection delay in milliseconds */
 export const CONNECT_DELAY_MS = 1200;
