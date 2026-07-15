@@ -153,7 +153,7 @@ const IMAGENET_STD  = [0.229, 0.224, 0.225];
 // Corn class indices in the 38-class PlantVillage label order
 const CORN_INDICES: Record<number, ConditionKey> = {
   7:  "gray_leaf_spot",
-  8:  "rust",
+  8:  "rust",           // Puccinia sorghi
   9:  "blight",         // Exserohilum turcicum
   10: "healthy",        // No disease detected
 };
