@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
-
-/** Bullet list item with a coloured dot */
+/** Bulleted list item with a primary-colour dot, for use in <ul> */
 export function ListItem({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <li className={cn("flex gap-3 text-[15px] leading-relaxed", className)}>
