@@ -14,6 +14,7 @@ import leafSample from "@/assets/leaf-sample.jpg";
 // Possible states of the phone-to-PC connection
 export type ConnectionStatus = "disconnected" | "searching" | "connecting" | "connected";
 
+// Lifecycle stages of a single scan sample
 export type SampleStatus = "sending" | "received" | "analyzing" | "complete" | "failed";
 
 // Quality assessment carried alongside every sample
