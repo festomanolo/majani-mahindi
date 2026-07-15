@@ -146,7 +146,7 @@ function Dashboard() {
               <p className="mt-2 max-w-sm text-[15px] leading-relaxed text-muted-foreground">
                 {connected
                   ? "Connected — scan a maize leaf from the phone to begin analysis."
-                  : "Waiting for mobile scanner. Pair a phone on this network to begin."}
+                  : "Waiting for phone scanner. Connect a phone on this network to start."}
               </p>
               <Link
                 to="/phone"
