@@ -1,4 +1,4 @@
-/** True when running in a server-side (non-browser) environment */
+/** True when code is executing in a non-browser (server-side) environment */
 export const isServer = typeof window === "undefined";
 
 /** True when running in a browser environment */
