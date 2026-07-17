@@ -247,7 +247,8 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
     }
   }
   const lapVar = lapCount > 0 ? lapSum / lapCount : 0;
-  const focus = lapVar > 200;
+  // Reduced focus threshold from 200 → 150 — crops in field have softer edges
+  const focus = lapVar > 150;
 
   // Leaf visibility: green channel dominance
   const visibility = avgG > avgR * 1.05 && avgG > avgB * 1.05 && avgG > 45;
