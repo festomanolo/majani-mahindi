@@ -293,6 +293,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
 
+/** Hook to consume MaizeVision store — must be inside provider */
 export function useMaizeVision() {
   const ctx = useContext(StoreContext);
   if (!ctx) throw new Error("useMaizeVision must be used inside MaizeVisionProvider");
