@@ -102,3 +102,6 @@ function AnalysisPage() {
     </PcShell>
   );
 }
+
+// ProcessingMetrics rendered in the dev-info panel below the main result
+// Import: import { ProcessingMetrics } from '@/components/diagnostic'
