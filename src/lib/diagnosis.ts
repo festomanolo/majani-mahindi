@@ -263,6 +263,10 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
 
 // ── Preprocessing: NCHW + ImageNet normalisation ─────────────────────────────
 
+/**
+ * Resize image to 224×224, apply ImageNet mean/std normalisation,
+ * and return a [1, 3, 224, 224] NCHW Float32 tensor.
+ */
 async function preprocessImage(
   imageUrl: string,
 ): Promise<{ tensor: ort.Tensor; quality: ImageQualityMetrics }> {
