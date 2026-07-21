@@ -259,8 +259,8 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
   const focus = lapVar > 120;
 
   // Leaf visibility: green channel dominance
-  // Relaxed green dominance minimum from 45 → 35 for shaded leaves
-  const visibility = avgG > avgR * 1.02 && avgG > avgB * 1.02 && avgG > 35;
+  // Relaxed green dominance for shaded/yellow leaves
+  const visibility = avgG > avgR * 1.01 && avgG > avgB * 1.01 && avgG > 30;
 
   // weight: lighting and focus matter more than green dominance
   const passCount = [lighting, focus, visibility].filter(Boolean).length;
