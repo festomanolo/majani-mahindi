@@ -1,6 +1,6 @@
 {
   "name": "majani-mahindi",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Local-network maize leaf disease scanner with on-device ONNX inference and Swahili support",
   "private": true,
   "sideEffects": false,
