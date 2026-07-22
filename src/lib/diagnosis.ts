@@ -118,7 +118,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Prioritise fields with a history of gray leaf spot or continuous maize cropping.",
     ],
     field: [
-      "Rotate to a non-grass crop; the fungus survives in infected crop residue on the soil surface.",
+      "Rotate to a non-grass host crop; C. zeae-maydis survives in infected crop residue on the soil surface.",
       "Till to bury residue and reduce the initial inoculum for the next season.",
       "Plant resistant or tolerant hybrids wherever available — host plant resistance is the most cost-effective long-term control strategy.",
       "Avoid minimum-till in fields with high residue levels and a history of the disease.",
