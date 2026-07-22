@@ -6,6 +6,7 @@ import * as ort from "onnxruntime-web";
 // Output: "logits" — raw logits over 38 classes (apply softmax yourself).
 // Corn classes: 7=GrayLeafSpot  8=CommonRust  9=NorthernLeafBlight  10=Healthy
 
+// Union of all diagnosable maize leaf conditions
 export type ConditionKey = "healthy" | "rust" | "blight" | "gray_leaf_spot";
 
 export type Condition = {
