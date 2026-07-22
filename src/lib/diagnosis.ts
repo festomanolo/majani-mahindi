@@ -257,7 +257,7 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
   }
   const lapVar = lapCount > 0 ? lapSum / lapCount : 0;
   // Focus: Laplacian variance > 140
-  const focus = lapVar > 140;
+  const focus = lapVar > 130;
 
   // Leaf visibility: green channel dominance
   // Leaf visibility: require slight green dominance and minimum brightness
