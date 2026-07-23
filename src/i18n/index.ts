@@ -17,6 +17,7 @@ export function getLocale(): Locale {
   return nav.startsWith("sw") ? "sw" : "en";
 }
 
+/** Persist a locale choice to localStorage */
 export function setLocale(locale: Locale) {
   try { localStorage.setItem(STORAGE_KEY, locale); } catch { /* quota */ }
 }
