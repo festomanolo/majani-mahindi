@@ -146,7 +146,7 @@ export type AnalysisResult = {
 };
 
 /** Human-readable model identifier shown in the UI */
-export const MODEL_VERSION = "ResNet50 · CropGuard · PlantVillage";
+export const MODEL_VERSION = "CropGuard ResNet50 · PlantVillage 38-class";
 /** Training dataset description */
 export const DATASET = "PlantVillage · 38 classes · leaf-grouped split";
 
