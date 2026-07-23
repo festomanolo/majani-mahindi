@@ -34,3 +34,13 @@ All notable changes to Majani Mahindi are documented here.
 - Broadcast channel name bumped to v2
 - Default PC name updated to STATION-01
 - Low-confidence threshold adjusted to 45%
+
+## [0.1.0] — 2026-04-01
+
+### Added
+- Initial project scaffold
+- TanStack Start + React 19 + Tailwind v4
+- ONNX Runtime Web with CropGuard ResNet50 model
+- Mobile phone scanner over local Wi-Fi
+- 4-class maize disease classification
+- Pairing QR code
