@@ -1,3 +1,4 @@
+// reports.tsx — aggregate reporting view
 import { createFileRoute } from "@tanstack/react-router";
 import { PcShell } from "@/components/pc-shell";
 import { Field } from "@/components/brand";
