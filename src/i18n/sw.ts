@@ -41,5 +41,9 @@ export const sw: I18nKeys = {
     error: "Hitilafu",
     retry: "Jaribu tena",
     back: "Rudi",
+    save: "Hifadhi",
+    cancel: "Ghairi",
+    confirm: "Thibitisha",
+    close: "Funga",
   },
 };
