@@ -4,7 +4,7 @@ import { STAGES, type ImageQuality } from "@/lib/maizevision-store";
 import { cn } from "@/lib/utils";
 import leafHealthy from "@/assets/leaf-healthy.jpg";
 
-export function ConfidenceBar({ value, tone }: { value: number; tone?: "low" }) {
+export function ConfidenceBar({ value, tone, label }: { value: number; tone?: "low"; label?: string }) {
   return (
     <div className="w-full">
       <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
