@@ -1,3 +1,4 @@
+// pc-shell.tsx — top-level desktop chrome
 import { Link, useRouterState } from "@tanstack/react-router";
 import React from "react";
 import {
