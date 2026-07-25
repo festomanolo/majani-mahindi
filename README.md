@@ -46,3 +46,13 @@ Pull requests welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## License
 
 MIT
+
+## Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | TanStack Start (React 19) |
+| Styling | Tailwind CSS v4 |
+| Inference | ONNX Runtime Web |
+| State | React Context + localStorage |
+| Comms | Server-Sent Events (SSE) |
