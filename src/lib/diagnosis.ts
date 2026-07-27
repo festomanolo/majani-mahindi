@@ -241,7 +241,8 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
 
   // Focus: Laplacian variance (sample every other row/col for speed)
   let lapSum = 0, lapCount = 0;
-  for (let y = 1; y < size - 1; y += 2) {
+  // Subsample every 2 rows and columns for performance
+      for (let y = 1; y < size - 1; y += 2) {
     for (let x = 1; x < size - 1; x += 2) {
       const lum = (px: number) =>
         (data[px] ?? 0) * 0.299 + (data[px + 1] ?? 0) * 0.587 + (data[px + 2] ?? 0) * 0.114;
