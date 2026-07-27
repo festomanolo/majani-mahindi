@@ -13,7 +13,7 @@ export const LOW_CONF_PCT = 45;
 export const NOT_MAIZE_PROB = 0.62;
 
 /** ONNX model input resolution */
-// ResNet50 input: 224×224 pixels
+/** ResNet50 input resolution (pixels) */
 export const MODEL_INPUT_SIZE = 224;
 
 /** SSE reconnect delay in milliseconds (3 s in normal operation) */
