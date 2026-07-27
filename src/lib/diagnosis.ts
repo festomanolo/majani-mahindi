@@ -256,8 +256,8 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
     }
   }
   const lapVar = lapCount > 0 ? lapSum / lapCount : 0;
-  // Focus: Laplacian variance > 120 — crops in field have naturally soft edges
-  const focus = lapVar > 120;
+  // Focus: Laplacian variance > 140
+  const focus = lapVar > 140;
 
   // Leaf visibility: green channel dominance
   // Relaxed green dominance for shaded/yellow leaves
