@@ -1,5 +1,8 @@
 # Majani Mahindi 🌽
 
+![CI](https://github.com/festomanolo/majani-mahindi/actions/workflows/ci.yml/badge.svg)
+
+
 Local-network maize leaf disease analyser built with TanStack Start,
 React 19, Tailwind v4, and ONNX Runtime Web.
 
