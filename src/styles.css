@@ -236,3 +236,9 @@ html {
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: oklch(0.7 0 0 / 0.4); border-radius: 3px; }
+
+/* Selection highlight colour */
+::selection {
+  background-color: oklch(0.41 0.088 148 / 0.25);
+  color: inherit;
+}
