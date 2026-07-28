@@ -82,4 +82,4 @@ All notable changes to Majani Mahindi are documented here.
 - CONTRIBUTING: security and feature request sections
 
 ---
-*Changelog maintained using Conventional Commits.*
+*Changelog maintained following [Conventional Commits](https://conventionalcommits.org).*
