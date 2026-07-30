@@ -313,3 +313,8 @@ export function formatTime(ts: number) {
     minute: "2-digit",
   });
 }
+
+// Retry behaviour (issue #11 fix):
+// retry(id) → patchSample({ status:'received', stage:0, error:undefined })
+//           → startAnalysis(id)
+// This ensures StageList renders from step 0 on each retry.
