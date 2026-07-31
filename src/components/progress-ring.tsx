@@ -1,4 +1,8 @@
-/** SVG circular progress ring */
+/**
+ * SVG circular progress ring.
+ * @param value - percentage 0–100
+ */
+
 export function ProgressRing({
   value,
   size = 48,
