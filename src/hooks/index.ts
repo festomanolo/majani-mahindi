@@ -16,3 +16,9 @@ export { useOnline } from './use-online';
 export { useMounted } from './use-mounted';
 export { usePrevious } from './use-previous';
 export { useClickOutside } from './use-click-outside';
+
+export { useWindowSize } from './use-window-size';
+export { useOnline } from './use-online';
+export { useMounted } from './use-mounted';
+export { usePrevious } from './use-previous';
+export { useClickOutside } from './use-click-outside';
