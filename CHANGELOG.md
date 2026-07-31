@@ -18,6 +18,10 @@ All notable changes to Majani Mahindi are documented here.
 - useTheme, useLocale, useDebounce, useInterval, useEventListener, useKeyboardShortcut, usePagination, useSystemStats, useWarmupState, useLocalStorage hooks
 - EmptyState, Spinner, CopyButton, StatusBadge, SectionHeader UI components
 - ErrorBoundary component
+- format.ts: formatBytes, formatDuration, formatPercent, formatDate, formatRelative
+- logger.ts: production-safe console wrapper
+- assert.ts: dev-only assertion utility
+- constants.ts: centralised magic-number constants
 - GitHub Actions CI workflow (lint, build, typecheck)
 - CONTRIBUTING.md
 - .editorconfig
