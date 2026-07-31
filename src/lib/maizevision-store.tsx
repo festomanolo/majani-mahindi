@@ -64,7 +64,7 @@ export const STAGES = [
   "Image quality check",
   "Image preprocessing",
   "Feature analysis",  // stage 3
-  "Classification",
+  "Classification",  // stage 4
   "Recommendation",  // stage 5
 ];
 
