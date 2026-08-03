@@ -9,6 +9,7 @@
  * This module runs only in the Nitro server process — never in the browser.
  */
 
+// upload-events.ts — SSE event types for phone image push
 export type PhoneUploadEvent = {
   id: string;
   imageDataUrl: string; // full data-URL so the PC can display + run inference
