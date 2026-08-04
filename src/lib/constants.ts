@@ -26,3 +26,6 @@ export const HIGH_CONF_PCT = 80;
 
 /** Number of items shown in the dashboard recent-scans list */
 export const DASHBOARD_RECENT_COUNT = 5;
+
+/** Pages of history shown per page */
+export const HISTORY_PAGE_SIZE = 20;
