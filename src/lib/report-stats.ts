@@ -27,6 +27,7 @@ function weekStart(offset = 0): number {
   return d.getTime();
 }
 
+/** Compute summary statistics from all completed samples */
 export function computeStats(samples: Sample[]): ReportStats {
   const completed = samples.filter((s) => s.status === "complete");
   const total = samples.length;
