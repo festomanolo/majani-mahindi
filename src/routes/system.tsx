@@ -100,3 +100,6 @@ function SystemPage() {
     </PcShell>
   );
 }
+
+// System stats panel wired to useSystemStats hook
+// Shows: deviceMemoryGB, hardwareConcurrency, wasmSupported, online
