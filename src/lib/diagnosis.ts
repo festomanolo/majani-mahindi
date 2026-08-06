@@ -206,6 +206,7 @@ export function prewarmModel(): void {
 
 // ── Image quality analysis ────────────────────────────────────────────────────
 
+// Heuristic image quality assessment
 export type ImageQualityMetrics = {
   overall: "Good" | "Fair" | "Low";
   lighting: boolean;
