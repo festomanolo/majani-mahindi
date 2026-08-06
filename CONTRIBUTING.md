@@ -47,4 +47,4 @@ Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chor
 
 ## Reporting a Security Issue
 
-Do not open a public GitHub issue for security vulnerabilities. Email the maintainer directly.
+Do not open a public GitHub issue for security vulnerabilities. Email the maintainer directly with subject line [SECURITY].
