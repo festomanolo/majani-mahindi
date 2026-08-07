@@ -13,6 +13,10 @@ React 19, Tailwind v4, and ONNX Runtime Web.
 - 🌿 Detects: Healthy, Common Rust, Northern Leaf Blight, Gray Leaf Spot
 - 📊 Full diagnosis report with recommended actions
 
+## Requirements
+
+Node.js 20+, a modern browser (Chrome/Edge recommended for WASM SIMD).
+
 ## Quick Start
 
 ```bash
