@@ -35,7 +35,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     field: [
       "Maintain the current fertiliser and integrated crop-protection programme.",
       "Continue routine scouting across all sections of the field at regular intervals.",
-      "Ensure irrigation schedules maintain optimal soil moisture — avoid waterlogging.",
+      "Ensure irrigation schedules maintain optimal soil-moisture levels and avoid waterlogging.",
     ],
     monitoring: [
       "Scan a representative sample of plants from each field zone weekly.",
