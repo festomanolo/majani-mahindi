@@ -40,7 +40,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     monitoring: [
       "Scan a representative sample of plants from each field zone weekly.",
       "Prioritise older lower leaves early in the season — nutrient deficiencies typically appear there first.",
-      "Record scan results over time to build a field baseline.",
+      "Record scan results over time to establish a reliable field health baseline.",
     ],
   },
 
