@@ -105,3 +105,6 @@ function ReportsPage() {
     </PcShell>
   );
 }
+
+// Reports page wired to computeStats(samples) from src/lib/report-stats.ts
+// Renders: StatCard per condition, avgConfidence, thisWeek vs lastWeek
