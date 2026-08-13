@@ -121,7 +121,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Rotate to a non-grass host crop; C. zeae-maydis survives in infected crop residue on the soil surface.",
       "Till to bury residue and reduce the initial inoculum for the next season.",
       "Plant resistant or tolerant hybrids wherever available — host plant resistance is the most cost-effective long-term control strategy.",
-      "Avoid minimum-till in fields with high residue levels and a history of the disease.",
+      "Avoid minimum-till or no-till management in fields with high surface residue and a documented history of the disease.",
     ],
     monitoring: [
       "Scout twice weekly from V10 to tasselling in fields with significant residue loads or a history of gray leaf spot.",
