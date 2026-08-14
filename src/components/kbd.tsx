@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 
-/** Renders a keyboard key in a <kbd> element */
+/** Renders a keyboard shortcut key label */
+
 export function Kbd({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <kbd
