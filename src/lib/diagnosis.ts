@@ -9,6 +9,7 @@ import * as ort from "onnxruntime-web";
 // Union of all diagnosable maize leaf conditions
 export type ConditionKey = "healthy" | "rust" | "blight" | "gray_leaf_spot";
 
+// Full condition descriptor including signs and management advice
 export type Condition = {
   key: ConditionKey;
   name: string;
