@@ -1,5 +1,7 @@
 {
   "name": "majani-mahindi",
+  "version": "0.2.0",
+  "description": "Local-network maize leaf disease analyser with on-device ONNX inference",
   "private": true,
   "sideEffects": false,
   "type": "module",
