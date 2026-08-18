@@ -318,3 +318,6 @@ export function formatTime(ts: number) {
 // retry(id) → patchSample({ status:'received', stage:0, error:undefined })
 //           → startAnalysis(id)
 // This ensures StageList renders from step 0 on each retry.
+
+// Transfer progress steps (issue #14 fix): [10,35,65,85,100] @ 200ms each
+// Auto-analyze delayed 600ms to ensure transfer bar reaches 100% first
