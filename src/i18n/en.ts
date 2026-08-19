@@ -39,6 +39,10 @@ export const en = {
     error: "Error",
     retry: "Retry",
     back: "Back",
+    save: "Save",
+    cancel: "Cancel",
+    confirm: "Confirm",
+    close: "Close",
   },
 } as const;
 export type I18nKeys = typeof en;
