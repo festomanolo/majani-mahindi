@@ -87,7 +87,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     immediate: [
       "Apply a registered fungicide (triazole or strobilurin) when lesions first appear on lower leaves.",
       "Do not delay treatment: yield losses increase sharply if the ear leaf becomes infected before silking.",
-      "Remove and bag (do not compost) severely infected lower leaves to reduce the local spore load.",
+      "Physically remove and dispose of (do not compost) severely infected lower leaves to cut local spore load.",
     ],
     field: [
       "Rotate to a non-grass crop for at least two seasons; E. turcicum survives on infected maize residue.",
