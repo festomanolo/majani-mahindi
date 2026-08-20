@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-
-/**
- * True after the first browser render.
- * Prevents SSR/hydration mismatches when accessing browser globals.
- */
+/** Returns true only after first client-side render. Prevents SSR/hydration mismatches. */
 export function useMounted(): boolean {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
