@@ -218,3 +218,10 @@
   outline: 2px solid oklch(0.41 0.088 148);
   outline-offset: 2px;
 }
+
+/* Custom animation: scan sweep for analysis in progress */
+@keyframes scan-sweep {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(100vh); }
+}
+.scan-sweep { animation: scan-sweep 2s linear infinite; }
