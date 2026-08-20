@@ -69,7 +69,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     monitoring: [
       "Scout at least once per week from V6 onwards, especially during warm (16–23 °C), humid weather.",
       "Count pustules per leaf on ≥20 plants and record the percentage of leaf area affected.",
-      "A second fungicide application is often needed 14–21 days after the first if conditions remain favourable.",
+      "A second fungicide application is often required 14–21 days after the first if warm humid conditions persist.",
     ],
   },
 
