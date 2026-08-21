@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
-/** Bulleted list item with a primary-colour dot, for use in <ul> */
+/** Bulleted <li> with branded dot — use inside a <ul> */
 export function ListItem({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <li className={cn("flex gap-3 text-[15px] leading-relaxed", className)}>
