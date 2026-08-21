@@ -1,4 +1,4 @@
-/** Shared formatting utilities */
+/** Shared formatting utilities for the MaizeVision station */
 
 export function formatBytes(bytes: number, decimals = 1): string {
   if (bytes === 0) return "0 B";
