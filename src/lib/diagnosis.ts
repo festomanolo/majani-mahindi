@@ -274,7 +274,7 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
 async function preprocessImage(
   imageUrl: string,
 ): Promise<{ tensor: ort.Tensor; quality: ImageQualityMetrics }> {
-  const SIZE = 224;
+  const SIZE = 224; // ResNet50 expected input resolution
 
   const img = new Image();
   img.crossOrigin = "anonymous";
