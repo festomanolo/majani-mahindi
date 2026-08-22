@@ -148,6 +148,7 @@ export type AnalysisResult = {
 /** Human-readable model identifier shown in the UI */
 export const MODEL_VERSION = "CropGuard ResNet50 · PlantVillage 38-class";
 /** Training dataset description */
+/** Training dataset, split strategy, and class count */
 export const DATASET = "PlantVillage · 38 classes · leaf-grouped split";
 
 // ── ImageNet normalisation constants ─────────────────────────────────────────
