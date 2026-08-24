@@ -111,7 +111,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Rectangular grey, tan, or pale-brown lesions sharply bounded by parallel leaf veins",
       "Lesions typically 1–8 cm long, oriented parallel to the leaf midrib",
       "Under high-humidity conditions a fine grey powdery coating of conidia may be visible on the lesion surface",
-      "Lesions coalesce under heavy infection, causing large areas of leaf death",
+      "Under heavy infection pressure lesions coalesce, causing extensive areas of premature leaf death",
     ],
     immediate: [
       "Apply a registered strobilurin or triazole fungicide at first appearance of lesions on lower leaves — protecting the ear leaf is the highest priority.",
