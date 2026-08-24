@@ -58,7 +58,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     immediate: [
       "Apply a registered foliar fungicide (triazole or strobilurin class) as soon as pustules appear on multiple plants.",
       "Time application in the early morning to maximise spray retention and minimise evaporation.",
-      "Avoid spraying at tasselling to protect pollinators.",
+      "Avoid spraying during tasselling to protect pollinators and avoid pollen contamination.",
     ],
     field: [
       "Rotate to a non-grass host crop for at least one season to break the pathogen spore cycle.",
