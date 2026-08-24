@@ -24,6 +24,10 @@ npm install
 npm run dev
 ```
 
+## Model
+
+Download `cropguard.onnx` from the releases page and place it in `public/models/`.
+
 ## Contributing
 
 Pull requests welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
