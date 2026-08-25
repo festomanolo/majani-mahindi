@@ -305,6 +305,10 @@ async function preprocessImage(
   return { tensor: new ort.Tensor("float32", float32, [1, 3, SIZE, SIZE]), quality };
 }
 
+/**
+ * Compute softmax over raw logits.
+ * Numerically stable: subtract max before exponentiation.
+ */
 function softmax(logits: number[]): number[] {
   const max = Math.max(...logits);
   const exps = logits.map((v) => Math.exp(v - max));
