@@ -20,7 +20,11 @@ Node.js 20+, a modern Chromium browser (Chrome 112+ or Edge 112+) for full WASM 
 ## Quick Start
 
 ```bash
+# 1. Install dependencies
 npm install
+
+# 2. Download model (see Model section)
+# 3. Start dev server
 npm run dev
 ```
 
