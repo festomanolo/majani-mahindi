@@ -26,6 +26,9 @@ npm run dev
 
 ## Model
 
+> ResNet50 trained on PlantVillage (38 classes, macro-F1 0.9865).
+
+
 Download `cropguard.onnx` from the releases page and place it in `public/models/`.
 
 ## Contributing
