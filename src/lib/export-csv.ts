@@ -37,3 +37,8 @@ export function downloadCSV(csv: string, filename = "maizevision-export.csv") {
   a.click();
   URL.revokeObjectURL(url);
 }
+
+export function csvFilename(date = new Date()): string {
+  const d = date.toISOString().slice(0, 10);
+  return `maizevision-export-${d}.csv`;
+}
