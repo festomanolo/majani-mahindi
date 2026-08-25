@@ -242,3 +242,6 @@ function Dashboard() {
     </PcShell>
   );
 }
+
+// Keyboard shortcut: Enter starts analysis when current.status === 'received'
+// Implemented via useKeyboardShortcut({ key: 'Enter', enabled: isReady })
