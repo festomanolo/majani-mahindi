@@ -85,7 +85,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Disease progresses from lower leaves upward; ear-leaf infection causes most yield loss",
     ],
     immediate: [
-      "Apply a registered fungicide (triazole or strobilurin) when lesions first appear on lower leaves.",
+      "Apply a registered fungicide (triazole or strobilurin class) as soon as the first lesions are found on lower canopy leaves.",
       "Do not delay treatment: yield losses increase sharply if the ear leaf becomes infected before silking.",
       "Physically remove and dispose of (do not compost) severely infected lower leaves to cut local spore load.",
     ],
