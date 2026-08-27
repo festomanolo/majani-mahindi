@@ -36,6 +36,7 @@ All notable changes to Majani Mahindi are documented here.
 
 ### Removed
 - Large ONNX/WASM binaries from git tracking (use releases for downloads)
+- Placeholder package name (tanstack_start_ts)
 
 ### Changed
 - Border radius token adjusted
