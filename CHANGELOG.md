@@ -72,3 +72,11 @@ All notable changes to Majani Mahindi are documented here.
 - Mobile phone scanner over local Wi-Fi
 - 4-class maize disease classification
 - Pairing QR code
+
+## [0.6.0] — 2026-09-29
+
+### Added
+- math.ts, string.ts, array.ts, object.ts utility libraries
+- formatNumber, formatPlural to format.ts
+- repeat(), stdDev() utilities
+- CONTRIBUTING: security and feature request sections
