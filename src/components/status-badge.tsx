@@ -17,6 +17,7 @@ const STATUS_COLORS: Record<SampleStatus, string> = {
   failed:    "bg-red-500/15 text-red-700 dark:text-red-300",
 };
 
+/** Coloured badge reflecting the lifecycle status of a scan sample */
 export function StatusBadge({ status }: { status: SampleStatus }) {
   return (
     <span
