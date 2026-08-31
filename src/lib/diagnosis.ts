@@ -150,6 +150,7 @@ export const DATASET = "PlantVillage · 38 classes · leaf-grouped split";
 // ── ImageNet normalisation constants ─────────────────────────────────────────
 // ImageNet RGB channel means used for ResNet normalisation
 const IMAGENET_MEAN = [0.485, 0.456, 0.406];
+// ImageNet RGB channel standard deviations
 const IMAGENET_STD  = [0.229, 0.224, 0.225];
 
 // Corn class indices in the 38-class PlantVillage label order
