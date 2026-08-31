@@ -8,3 +8,7 @@ Thank you for your interest in contributing!
 - `fix/<short-description>` — bug fixes
 - `docs/<short-description>` — documentation only
 - `chore/<short-description>` — maintenance / tooling
+
+## Code Style
+
+We use Prettier and ESLint. Run `npm run format` before committing.
