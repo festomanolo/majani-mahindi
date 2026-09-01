@@ -13,6 +13,7 @@ export type ReportStats = {
   lastWeek: number;
 };
 
+// Display names for each condition key
 const CONDITION_NAMES: Record<ConditionKey, string> = {
   healthy: "Healthy",
   rust: "Common Rust",
