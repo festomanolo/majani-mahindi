@@ -31,3 +31,6 @@ export const DASHBOARD_RECENT_COUNT = 5;
 
 /** Pages of history shown per page */
 export const HISTORY_PAGE_SIZE = 20;
+
+// Image quality thresholds (issue #16 tuning)
+// Lighting: [30, 220] | Focus Laplacian: > 140 | Green dominance: 1.02x, min=32
