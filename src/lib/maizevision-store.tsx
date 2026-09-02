@@ -68,7 +68,7 @@ export const STAGES = [
   "Recommendation",  // stage 5
 ];
 
-const STORAGE_KEY = "maizevision.state.v1";
+const STORAGE_KEY = "maizevision.state.v2";
 const CHANNEL = "maizevision.sync.v1";
 
 const initialState: State = {
