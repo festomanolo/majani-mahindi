@@ -13,6 +13,7 @@
     "noEmit": true,
 
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noUncheckedIndexedAccess": true, // catches array[i] undefined
     "noUnusedLocals": false,
