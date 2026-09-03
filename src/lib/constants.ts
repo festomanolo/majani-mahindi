@@ -1,6 +1,6 @@
 /** Application-wide constants */
 
-/** Maximum number of samples kept in memory */
+/** Maximum number of samples kept in memory at any one time */
 export const MAX_SAMPLES = 30;
 
 /** Maximum number of samples whose image data is kept (rest use placeholder) */
