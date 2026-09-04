@@ -63,7 +63,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     field: [
       "Rotate to a non-grass host crop for at least one season to break the pathogen spore cycle.",
       "Select certified rust-resistant hybrid varieties for the following planting season.",
-      "Remove and destroy heavily infected crop debris after harvest.",
+      "Remove and destroy (burn or deep-bury) heavily infected crop debris after harvest.",
       "Avoid excessive nitrogen fertilisation — lush, succulent tissue is more susceptible to rust.",
     ],
     monitoring: [
