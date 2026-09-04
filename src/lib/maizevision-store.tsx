@@ -59,6 +59,7 @@ type State = {
   autoAnalyze: boolean;
 };
 
+// Human-readable labels for each analysis pipeline stage
 export const STAGES = [
   "Receiving image",  // stage 0
   "Image quality check",  // stage 1
