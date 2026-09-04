@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { Copy, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+/** Copy-to-clipboard button with a transient check-icon feedback */
 export function CopyButton({ text, className }: { text: string; className?: string }) {
   const [copied, setCopied] = useState(false);
 
