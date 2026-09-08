@@ -8,6 +8,7 @@ type Options = {
   enabled?: boolean;
 };
 
+/** Bind a keyboard shortcut; handler is ignored if focus is on an input */
 export function useKeyboardShortcut(options: Options, handler: () => void) {
   const { key, ctrl = false, meta = false, shift = false, enabled = true } = options;
 
