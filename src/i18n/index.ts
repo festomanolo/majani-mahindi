@@ -22,6 +22,7 @@ export function setLocale(locale: Locale) {
   try { localStorage.setItem(STORAGE_KEY, locale); } catch { /* quota */ }
 }
 
+/** Retrieve the translation map for a given locale */
 export function t(locale: Locale): typeof en {
   return locales[locale] ?? en;
 }
