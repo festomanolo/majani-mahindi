@@ -26,7 +26,7 @@ export const CONNECT_DELAY_MS = 1200;
 /** Confidence % threshold above which the result badge is shown in green */
 export const HIGH_CONF_PCT = 80;
 
-/** Number of items shown in the dashboard recent-scans list */
+/** Number of recent scans shown in the dashboard panel */
 export const DASHBOARD_RECENT_COUNT = 5;
 
 /** Pages of history shown per page */
