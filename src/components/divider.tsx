@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 
+/** Horizontal rule with an optional centred text label */
 export function Divider({ label, className }: { label?: string; className?: string }) {
   if (!label) {
     return <hr className={cn("border-border", className)} />;
