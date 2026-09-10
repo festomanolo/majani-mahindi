@@ -195,7 +195,7 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
           ...s,
           connection: { ...s.connection, status: "connected", connectedAt: Date.now() },
         })),
-      1400,
+      1200,
     );
   }, [update]);
 
