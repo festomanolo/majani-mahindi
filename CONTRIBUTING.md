@@ -2,6 +2,14 @@
 
 Thank you for your interest in contributing!
 
+## Setup
+
+```bash
+git clone https://github.com/festomanolo/majani-mahindi.git
+cd majani-mahindi
+npm install
+```
+
 ## Branch naming
 
 - `feat/<short-description>` — new features
