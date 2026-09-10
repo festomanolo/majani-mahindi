@@ -8,6 +8,7 @@ const OPTIONS: { value: Theme; icon: React.ReactNode; label: string }[] = [
   { value: "dark", icon: <Moon className="size-3.5" />, label: "Dark" },
 ];
 
+/** Three-way theme switcher: light / system / dark */
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   return (
