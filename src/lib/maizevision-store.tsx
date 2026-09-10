@@ -70,7 +70,7 @@ export const STAGES = [
 ];
 
 const STORAGE_KEY = "maizevision.state.v2";
-const CHANNEL = "maizevision.sync.v1";
+const CHANNEL = "maizevision.sync.v2";
 
 const initialState: State = {
   connection: {
