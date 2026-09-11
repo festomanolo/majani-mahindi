@@ -51,6 +51,13 @@ All notable changes to Majani Mahindi are documented here.
 - Stage animation delay reduced to 400ms
 - Transfer progress steps increased for visibility
 
+## [0.4.1] — 2026-09-29
+
+### Fixed
+- Various threshold tuning based on field feedback
+- CSV BOM for Excel compatibility
+- Anchor DOM cleanup in CSV download
+
 ## [0.3.0] — 2026-09-29
 
 ### Added
