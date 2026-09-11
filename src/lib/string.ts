@@ -1,4 +1,4 @@
-/** Capitalise the first character of a string, leaving the rest unchanged */
+/** Capitalise (uppercase) the first character of s */
 export function capitalize(s: string): string {
   return s.length > 0 ? s[0]!.toUpperCase() + s.slice(1) : s;
 }
