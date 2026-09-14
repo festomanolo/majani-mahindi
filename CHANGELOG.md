@@ -80,3 +80,6 @@ All notable changes to Majani Mahindi are documented here.
 - formatNumber (locale-aware), formatPlural to format.ts
 - repeat(), stdDev() utilities
 - CONTRIBUTING: security and feature request sections
+
+---
+*Changelog maintained using Conventional Commits.*
