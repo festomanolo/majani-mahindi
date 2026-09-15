@@ -43,6 +43,9 @@ All notable changes to Majani Mahindi are documented here.
 - Broadcast channel name bumped to v2
 - Default PC name updated to STATION-01
 - Low-confidence threshold adjusted to 45%
+- Focus Laplacian threshold reduced from 200 → 150 for field images
+- Green-dominance threshold relaxed for shaded leaf images
+- Sample ID suffix widened from 3 to 4 digits
 
 ## [0.3.0] — 2026-09-29
 
