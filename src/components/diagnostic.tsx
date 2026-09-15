@@ -190,7 +190,7 @@ export function LeafComparison({ imageUrl }: { imageUrl: string }) {
       <SectionTitle>Visual comparison</SectionTitle>
       <div className="grid gap-4 sm:grid-cols-2">
         {[
-          { label: "Current leaf", src: imageUrl },
+          { label: "Scanned leaf", src: imageUrl },
           { label: "Healthy reference", src: leafHealthy },
         ].map((item) => (
           <figure key={item.label} className="panel overflow-hidden">
