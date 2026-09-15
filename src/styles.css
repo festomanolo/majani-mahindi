@@ -251,3 +251,6 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Better default for images to avoid layout shift */
+img { display: block; max-width: 100%; }
