@@ -97,7 +97,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     ],
     monitoring: [
       "Scout twice weekly from the V8 stage onwards, focusing on the ear leaf and the two leaves above it.",
-      "Record lesion count per plant and percentage of leaf area affected.",
+      "Record the number of lesions per plant (on ≥20 plants) and estimate percentage of leaf area affected.",
       "If lesions are found on the ear leaf before silking, a second fungicide application 14 days later is strongly recommended.",
     ],
   },
