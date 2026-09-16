@@ -12,7 +12,7 @@ export function toTitleCase(s: string): string {
 export function truncate(s: string, maxLen: number): string {
   return s.length <= maxLen ? s : s.slice(0, maxLen - 1) + '…';
 }
-/** Pad a string on the left to a minimum length */
+/** Left-pad a string to a minimum length */
 export function padStart(s: string, len: number, fill = ' '): string {
   return s.padStart(len, fill);
 }
