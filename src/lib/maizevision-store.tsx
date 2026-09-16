@@ -213,6 +213,8 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
 
   const startAnalysis = useCallback(
     (id: string) => {
+      // Reset stage before starting so retry shows fresh progress
+      patchSample(id, { stage: 0, error: undefined });
       // Find the imageUrl for this sample from state (via ref to avoid stale closure)
       setState((prev) => {
         const sample = prev.samples.find((s) => s.id === id);
