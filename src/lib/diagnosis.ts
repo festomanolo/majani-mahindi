@@ -82,7 +82,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Elongated (2–15 cm) grey-green to tan lesions running parallel to veins",
       "Lesions have a distinctive 'cigar' or spindle shape that distinguishes NLB from other diseases",
       "Dark-olive to brown sporulation visible in the lesion centre during periods of high humidity",
-      "Disease progresses from lower leaves upward; ear-leaf infection causes most yield loss",
+      "Disease progresses upward from the lower canopy; infection of the ear leaf or above causes most yield loss",
     ],
     immediate: [
       "Apply a registered fungicide (triazole or strobilurin class) as soon as the first lesions are found on lower canopy leaves.",
