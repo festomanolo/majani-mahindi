@@ -1,3 +1,4 @@
+// phone.tsx — mobile camera scanner page
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useRef, useState } from "react";
 import { Camera, CheckCircle2, Loader2, RefreshCw, Upload, Leaf } from "lucide-react";
