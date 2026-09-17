@@ -236,8 +236,8 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
   const avgLum = avgR * 0.299 + avgG * 0.587 + avgB * 0.114;
 
   // Lighting: reject too dark or blown-out
-  // Lowered lower bound from 40 → 30 to accept overcast outdoor shots (closes #16)
-  const lighting = avgLum >= 30 && avgLum <= 220;
+  // Lighting: accept 28–222 to handle low-light and bright overcast
+  const lighting = avgLum >= 28 && avgLum <= 222;
 
   // Focus: Laplacian variance (sample every other row/col for speed)
   let lapSum = 0, lapCount = 0;
