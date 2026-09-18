@@ -114,7 +114,7 @@ export function Recommendations({ result }: { result: AnalysisResult }) {
   const condition = CONDITIONS[result.primary.key];
   const groups: [string, string[]][] = [
     ["Immediate Action", condition.immediate],
-    ["Field management", condition.field],
+    ["Field Management", condition.field],
     ["Monitoring", condition.monitoring],
   ];
   return (
