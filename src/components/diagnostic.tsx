@@ -1,3 +1,4 @@
+// diagnostic.tsx — reusable diagnosis UI components
 import { Check, Minus } from "lucide-react";
 import { CONDITIONS, type AnalysisResult } from "@/lib/diagnosis";
 import { STAGES, type ImageQuality } from "@/lib/maizevision-store";
