@@ -53,7 +53,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Small oval to elongated cinnamon-brown pustules visible on both upper and lower leaf surfaces",
       "Pustules rupture to release powdery rust-coloured spores",
       "Individual pustules are often surrounded by a faint chlorotic (yellow) halo",
-      "Heavily infected leaves may yellow and die back early",
+      "Heavily infected leaves may turn yellow prematurely and die back before grain fill",
     ],
     immediate: [
       "Apply a registered foliar fungicide (triazole or strobilurin) as soon as pustules appear on multiple plants (≥5% plant incidence).",
