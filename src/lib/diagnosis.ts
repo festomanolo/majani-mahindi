@@ -79,7 +79,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     summary:
       "Exserohilum turcicum infection producing long cigar-shaped grey-green lesions parallel to the leaf veins.",
     signs: [
-      "Elongated (2–15 cm) grey-green to tan lesions running parallel to veins",
+      "Elongated (2–20 cm) grey-green to tan lesions running parallel to leaf veins",
       "Lesions have a distinctive 'cigar' or spindle shape that distinguishes NLB from other diseases",
       "Dark-olive to brown sporulation visible in the lesion centre during periods of high humidity",
       "Disease progresses upward from the lower canopy; infection of the ear leaf or above causes most yield loss",
