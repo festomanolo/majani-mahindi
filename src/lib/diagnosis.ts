@@ -51,7 +51,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
       "Puccinia sorghi infection producing cinnamon-brown pustules scattered over both leaf surfaces.",
     signs: [
       "Small oval to elongated cinnamon-brown pustules visible on both upper and lower leaf surfaces",
-      "Pustules rupture to release powdery rust-coloured spores",
+      "Pustules rupture easily and release a powdery, rust-coloured mass of urediniospores",
       "Individual pustules are often surrounded by a faint chlorotic (yellow) halo",
       "Heavily infected leaves may turn yellow prematurely and die back before grain fill",
     ],
