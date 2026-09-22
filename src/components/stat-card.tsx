@@ -9,6 +9,7 @@ type Props = {
   className?: string;
 };
 
+/** Metric display card with label, value, and optional subtext */
 export function StatCard({ label, value, subtext, icon, className }: Props) {
   return (
     <div className={cn("panel p-5", className)}>
