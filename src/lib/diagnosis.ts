@@ -115,7 +115,7 @@ export const CONDITIONS: Record<ConditionKey, Condition> = {
     ],
     immediate: [
       "Apply a registered strobilurin or triazole fungicide at first appearance of lesions on lower leaves — protecting the ear leaf is the highest priority.",
-      "Prioritise fields with a history of gray leaf spot or continuous maize cropping.",
+      "Prioritise fields with a known history of gray leaf spot or continuous maize cultivation.",
     ],
     field: [
       "Rotate to a non-grass host crop; C. zeae-maydis survives in infected crop residue on the soil surface.",
