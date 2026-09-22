@@ -12,6 +12,7 @@ import {
 } from "@/components/diagnostic";
 import { Field } from "@/components/brand";
 
+/** Full analysis result view with report */
 export function ResultView({ sample }: { sample: Sample }) {
   const result = sample.result;
   if (!result) return null;
