@@ -266,7 +266,8 @@ export function MaizeVisionProvider({ children }: { children: ReactNode }) {
       });
       window.setTimeout(() => {
         patchSample(id, { status: "received" });
-        window.setTimeout(() => {
+        // Brief delay so the UI can render 'received' state before analysis starts
+          window.setTimeout(() => {
           if (autoRef.current) startAnalysis(id);
         }, 600);
       }, 1250);
