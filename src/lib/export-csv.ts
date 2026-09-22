@@ -35,6 +35,7 @@ export function downloadCSV(csv: string, filename = "maizevision-export.csv") {
   document.body.appendChild(a);
   a.download = filename;
   a.click();
+  document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
 
