@@ -115,7 +115,7 @@ export function Recommendations({ result }: { result: AnalysisResult }) {
   const groups: [string, string[]][] = [
     ["Immediate Action", condition.immediate],
     ["Field Management", condition.field],
-    ["Monitoring", condition.monitoring],
+    ["Monitoring & Scouting", condition.monitoring],
   ];
   return (
     <section className="space-y-5">
