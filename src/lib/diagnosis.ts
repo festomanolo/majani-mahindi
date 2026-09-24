@@ -237,7 +237,7 @@ function analyseQuality(data: Uint8ClampedArray, size: number): ImageQualityMetr
 
   // Lighting: reject too dark or blown-out
   // Lighting: accept 28–222 to handle low-light and bright overcast
-  const lighting = avgLum >= 28 && avgLum <= 222;
+  const lighting = avgLum >= 30 && avgLum <= 220;
 
   // Focus: Laplacian variance (sample every other row/col for speed)
   let lapSum = 0, lapCount = 0;
