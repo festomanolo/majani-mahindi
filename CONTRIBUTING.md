@@ -20,3 +20,9 @@ npm install
 ## Code Style
 
 We use Prettier and ESLint. Run `npm run format` before committing.
+
+## Pull Request Checklist
+
+- [ ] `npm run lint` passes
+- [ ] `npm run build` passes
+- [ ] Commit messages follow conventional commits
