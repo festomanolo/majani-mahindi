@@ -3,6 +3,8 @@
 All notable changes to Majani Mahindi are documented here.
 
 ## [Unreleased]
+<!-- Add new entries above this line -->
+
 
 ### Added
 - Dark mode support with system preference detection
