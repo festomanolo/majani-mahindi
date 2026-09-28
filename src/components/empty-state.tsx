@@ -9,6 +9,7 @@ type Props = {
   className?: string;
 };
 
+/** Centred empty state with optional icon, description, and action */
 export function EmptyState({ icon, title, description, action, className }: Props) {
   return (
     <div className={cn("flex flex-col items-center justify-center px-6 py-12 text-center", className)}>
