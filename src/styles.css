@@ -1,0 +1,193 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * MaizeVision Local AI — design system.
+ * Scientific field-diagnostic aesthetic: warm white paper, deep agricultural
+ * green, restrained maize yellow, thin borders, minimal depth.
+ * All colors are oklch tokens. No dark mode.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-success: var(--success);
+  --color-maize: var(--maize);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-surface: var(--surface);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --shadow-panel: 0 1px 2px oklch(0.28 0.03 140 / 0.04), 0 8px 24px oklch(0.28 0.03 140 / 0.05);
+  --shadow-lift: 0 2px 6px oklch(0.28 0.03 140 / 0.07), 0 18px 40px oklch(0.28 0.03 140 / 0.08);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(0.985 0.006 95);
+  --foreground: oklch(0.22 0.014 140);
+  --surface: oklch(0.968 0.008 95);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.014 140);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.014 140);
+
+  --primary: oklch(0.41 0.088 148);
+  --primary-foreground: oklch(0.985 0.006 95);
+
+  --secondary: oklch(0.955 0.012 120);
+  --secondary-foreground: oklch(0.3 0.04 148);
+
+  --muted: oklch(0.955 0.008 100);
+  --muted-foreground: oklch(0.52 0.016 140);
+
+  --accent: oklch(0.945 0.03 105);
+  --accent-foreground: oklch(0.32 0.05 120);
+
+  --maize: oklch(0.82 0.145 88);
+  --success: oklch(0.55 0.12 150);
+  --warning: oklch(0.72 0.14 72);
+  --warning-foreground: oklch(0.27 0.05 72);
+
+  --destructive: oklch(0.53 0.185 27);
+  --destructive-foreground: oklch(0.985 0.006 95);
+
+  --border: oklch(0.905 0.01 110);
+  --border-strong: oklch(0.83 0.014 120);
+  --input: oklch(0.9 0.01 110);
+  --ring: oklch(0.41 0.088 148);
+
+  --chart-1: oklch(0.41 0.088 148);
+  --chart-2: oklch(0.82 0.145 88);
+  --chart-3: oklch(0.6 0.05 150);
+  --chart-4: oklch(0.72 0.14 72);
+  --chart-5: oklch(0.75 0.02 120);
+
+  --sidebar: oklch(0.975 0.008 100);
+  --sidebar-foreground: oklch(0.28 0.016 140);
+  --sidebar-primary: oklch(0.41 0.088 148);
+  --sidebar-primary-foreground: oklch(0.985 0.006 95);
+  --sidebar-accent: oklch(0.945 0.018 110);
+  --sidebar-accent-foreground: oklch(0.3 0.04 148);
+  --sidebar-border: oklch(0.905 0.01 110);
+  --sidebar-ring: oklch(0.41 0.088 148);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv05";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@utility label-caps {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility panel {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+@utility hairline-grid {
+  background-image:
+    linear-gradient(to right, oklch(0.41 0.088 148 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.41 0.088 148 / 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-2%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(102%);
+    opacity: 0;
+  }
+}
+
+@utility scan-sweep {
+  animation: scanline 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@utility live-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
