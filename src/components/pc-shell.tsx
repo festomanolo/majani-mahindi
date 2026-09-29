@@ -12,16 +12,9 @@ import {
 import { MODEL_VERSION } from "@/lib/diagnosis";
 import { useMaizeVision } from "@/lib/maizevision-store";
 import { StatusDot, Wordmark } from "@/components/brand";
+import { LangToggle } from "@/components/lang-toggle";
+import { useI18n } from "@/lib/locale-context";
 import { cn } from "@/lib/utils";
-
-// All routes that actually exist — use typed Link for these
-const NAV = [
-  { to: "/",         label: "Dashboard", icon: CircleGauge },
-  { to: "/analysis", label: "Analysis",  icon: Activity },
-  { to: "/history",  label: "History",   icon: History },
-  { to: "/reports",  label: "Reports",   icon: FileText },
-  { to: "/system",   label: "System",    icon: SlidersHorizontal },
-] as const;
 
 /**
  * Desktop application chrome: top nav, page header, and content area.
@@ -37,14 +30,23 @@ export function PcShell({
   children: React.ReactNode;
 }) {
   const { connection, samples } = useMaizeVision();
+  const { strings } = useI18n();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const connected = connection.status === "connected";
+
+  const NAV = [
+    { to: "/",         label: strings.nav.dashboard,    icon: CircleGauge },
+    { to: "/analysis", label: strings.nav.analysis,     icon: Activity },
+    { to: "/history",  label: strings.nav.history,      icon: History },
+    { to: "/reports",  label: strings.nav.reports,      icon: FileText },
+    { to: "/system",   label: strings.nav.system,       icon: SlidersHorizontal },
+  ] as const;
 
   return (
     <div className="min-h-screen bg-background lg:grid lg:grid-cols-[248px_minmax(0,1fr)]">
       <aside className="border-b border-sidebar-border bg-sidebar lg:sticky lg:top-0 lg:h-screen lg:border-r lg:border-b-0">
         <div className="flex h-16 items-center border-b border-sidebar-border px-5">
-          <Wordmark subtitle="Local AI Diagnostic Station" />
+          <Wordmark subtitle={strings.shell.wordmarkSubtitle} />
         </div>
         <nav className="flex gap-1 overflow-x-auto p-3 lg:flex-col lg:overflow-visible">
           {NAV.map((item) => {
@@ -70,19 +72,19 @@ export function PcShell({
             className="flex shrink-0 items-center gap-2.5 rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-sidebar-accent/60 hover:text-sidebar-foreground"
           >
             <Smartphone className="size-4 shrink-0" strokeWidth={1.75} />
-            Phone scanner
+            {strings.nav.phoneScanner}
           </Link>
         </nav>
 
         <div className="hidden border-t border-sidebar-border p-5 lg:block">
-          <div className="label-caps">Station</div>
+          <div className="label-caps">{strings.shell.station}</div>
           <dl className="mt-3 space-y-2 text-xs">
-            {[
-              ["Device", connected ? connection.phoneName : "None"],
-              ["Network", connection.network],
-              ["Model", MODEL_VERSION],
-              ["Scans", String(samples.length)],
-            ].map(([k, v]) => (
+            {([
+              [strings.shell.device,  connected ? connection.phoneName : strings.common.none],
+              [strings.shell.network, connection.network],
+              [strings.shell.model,   MODEL_VERSION],
+              [strings.shell.scans,   String(samples.length)],
+            ] as [string, string][]).map(([k, v]) => (
               <div key={k} className="flex items-center justify-between gap-3">
                 <dt className="text-muted-foreground">{k}</dt>
                 <dd className="truncate font-mono text-foreground">{v}</dd>
@@ -90,8 +92,12 @@ export function PcShell({
             ))}
           </dl>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-            AI model runs locally. Internet connection not required.
+            {strings.shell.aiLocal}
           </p>
+          {/* Language toggle */}
+          <div className="mt-4">
+            <LangToggle />
+          </div>
         </div>
       </aside>
 
@@ -105,11 +111,15 @@ export function PcShell({
               <p className="mt-0.5 truncate text-sm text-muted-foreground">{subtitle}</p>
             ) : null}
           </div>
-          <div className="flex shrink-0 items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5">
-            <StatusDot tone={connected ? "ok" : "warn"} live={connected} />
-            <span className="font-mono text-[11px] tracking-[0.08em] uppercase">
-              {connected ? "Phone connected" : "Waiting for scanner"}
-            </span>
+          <div className="flex shrink-0 items-center gap-3">
+            {/* Language toggle visible on mobile/top bar */}
+            <LangToggle className="hidden sm:flex" />
+            <div className="flex shrink-0 items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5">
+              <StatusDot tone={connected ? "ok" : "warn"} live={connected} />
+              <span className="font-mono text-[11px] tracking-[0.08em] uppercase">
+                {connected ? strings.shell.phoneConnected : strings.shell.waitingScanner}
+              </span>
+            </div>
           </div>
         </header>
         <main className="min-w-0 flex-1 px-5 py-8 lg:px-10">{children}</main>
@@ -117,6 +127,3 @@ export function PcShell({
     </div>
   );
 }
-
-// Warm-up indicator injected into PcShell nav (see useWarmupState hook)
-// Renders: 'Model loading…' pill until warmupState === 'ready'

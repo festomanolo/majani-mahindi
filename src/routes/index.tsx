@@ -5,21 +5,25 @@ import { PairQr } from "@/components/pair-qr";
 import { Field, StatusDot } from "@/components/brand";
 import { QualityChecks, StageList } from "@/components/diagnostic";
 import { DATASET, MODEL_VERSION } from "@/lib/diagnosis";
+import { CONDITIONS_SW } from "@/lib/diagnosis-sw";
+import { CONDITIONS } from "@/lib/diagnosis";
 import { formatTime, useMaizeVision } from "@/lib/maizevision-store";
+import { useI18n } from "@/lib/locale-context";
+import { useKeyboardShortcut } from "@/hooks/use-keyboard-shortcut";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Diagnostic Station — MaizeVision Local AI" },
+      { title: "Kituo cha Uchunguzi — Majani Mahindi AI" },
       {
         name: "description",
         content:
-          "Local AI diagnostic station for maize leaf analysis. Receive scans from a connected phone and get nutrient deficiency diagnoses on your own network.",
+          "Kituo cha uchunguzi wa AI cha ndani kwa uchambuzi wa majani ya mahindi. Pokea picha kutoka kwa simu iliyounganishwa na upate utambuzi wa magonjwa kwenye mtandao wako.",
       },
-      { property: "og:title", content: "Diagnostic Station — MaizeVision Local AI" },
+      { property: "og:title", content: "Kituo cha Uchunguzi — Majani Mahindi AI" },
       {
         property: "og:description",
-        content: "Receive maize leaf scans from a connected phone and analyse them locally.",
+        content: "Pokea skani za majani ya mahindi kutoka kwa simu iliyounganishwa na uchanganue ndani.",
       },
     ],
   }),
@@ -29,23 +33,38 @@ export const Route = createFileRoute("/")({
 function Dashboard() {
   const { connection, samples, current, startAnalysis, autoAnalyze, setAutoAnalyze } =
     useMaizeVision();
+  const { locale, strings: s } = useI18n();
   const connected = connection.status === "connected";
   const completed = samples.filter((s) => s.status === "complete").length;
+  const conditions = locale === "sw" ? CONDITIONS_SW : CONDITIONS;
+
+  // Keyboard shortcut: Enter triggers analysis when a sample is received
+  const canAnalyze = current?.status === "received";
+  useKeyboardShortcut(
+    { key: "Enter", enabled: canAnalyze },
+    () => {
+      if (current) {
+        startAnalysis(current.id);
+        window.location.href = "/analysis";
+      }
+    },
+  );
 
   return (
-    <PcShell title="Diagnostic Station" subtitle="Local AI maize leaf analysis">
+    <PcShell title={s.dashboard.title} subtitle={s.dashboard.subtitle}>
       <div className="space-y-8">
+        {/* Status bar */}
         <section className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border lg:grid-cols-5">
           {[
             {
-              label: "Connected device",
-              value: connected ? connection.phoneName : "None",
+              label: s.dashboard.connectedDevice,
+              value: connected ? connection.phoneName : s.common.none,
               tone: connected ? ("ok" as const) : ("warn" as const),
             },
-            { label: "Network", value: connection.network, tone: "ok" as const },
-            { label: "AI model", value: "Ready", tone: "ok" as const },
-            { label: "Scans stored", value: `${samples.length} local`, tone: "neutral" as const },
-            { label: "Model version", value: MODEL_VERSION, tone: "neutral" as const },
+            { label: s.dashboard.network,       value: connection.network,            tone: "ok" as const },
+            { label: s.dashboard.aiModel,        value: s.dashboard.aiReady,           tone: "ok" as const },
+            { label: s.dashboard.scansStored,    value: `${samples.length} ${s.common.local}`, tone: "neutral" as const },
+            { label: s.dashboard.modelVersion,   value: MODEL_VERSION,                 tone: "neutral" as const },
           ].map((item) => (
             <div key={item.label} className="bg-card px-4 py-4">
               <div className="label-caps">{item.label}</div>
@@ -57,12 +76,13 @@ function Dashboard() {
           ))}
         </section>
 
+        {/* Current sample */}
         {current ? (
           <section className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
             <figure className="panel relative overflow-hidden">
               <img
                 src={current.imageUrl}
-                alt="Incoming maize leaf sample"
+                alt={locale === "sw" ? "Picha ya jani la mahindi" : "Incoming maize leaf sample"}
                 className="aspect-4/3 w-full object-cover"
               />
               {current.status === "analyzing" ? (
@@ -80,23 +100,25 @@ function Dashboard() {
 
             <div className="panel p-6">
               <div className="label-caps">
-                {current.status === "complete" ? "Analysis complete" : "New sample"}
+                {current.status === "complete" ? s.analysis.analysisComplete : s.analysis.newSample}
               </div>
               <h2 className="mt-2 text-2xl font-semibold tracking-[-0.02em]">
                 {current.status === "sending"
-                  ? "Receiving image"
+                  ? s.analysis.receivingImage
                   : current.status === "received"
-                    ? "Sample ready for analysis"
+                    ? s.analysis.sampleReady
                     : current.status === "analyzing"
-                      ? "Analysing leaf"
-                      : current.result?.primary.name}
+                      ? s.analysis.analysingLeaf
+                      : current.result
+                        ? conditions[current.result.primary.key].name
+                        : "—"}
               </h2>
 
               <dl className="mt-6 grid grid-cols-2 gap-5">
-                <Field label="Sample ID" value={current.id} />
-                <Field label="Timestamp" value={formatTime(current.capturedAt)} />
-                <Field label="Device" value={current.device} />
-                <Field label="Image quality" value={current.quality.overall} />
+                <Field label={s.result.sampleId}    value={current.id} />
+                <Field label={locale === "sw" ? "Wakati" : "Timestamp"} value={formatTime(current.capturedAt)} />
+                <Field label={s.result.device}       value={current.device} />
+                <Field label={s.result.imageQuality} value={current.quality.overall} />
               </dl>
 
               <div className="mt-6 border-t border-border pt-5">
@@ -110,13 +132,16 @@ function Dashboard() {
                       }}
                       className="mt-6 w-full rounded-md bg-primary px-4 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                     >
-                      Analyze leaf
+                      {s.analysis.analyzeLeaf}
                     </button>
+                    <p className="mt-2 text-center text-xs text-muted-foreground">
+                      {locale === "sw" ? "au bonyeza Enter" : "or press Enter"}
+                    </p>
                   </>
                 ) : current.status === "complete" ? (
                   <>
                     <div className="flex items-baseline justify-between">
-                      <span className="label-caps">Confidence</span>
+                      <span className="label-caps">{s.analysis.confidence}</span>
                       <span className="font-mono text-2xl">
                         {current.result?.primary.confidence}%
                       </span>
@@ -125,7 +150,7 @@ function Dashboard() {
                       to="/analysis"
                       className="mt-6 flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                     >
-                      Open full report <ArrowRight className="size-4" />
+                      {s.analysis.openReport} <ArrowRight className="size-4" />
                     </Link>
                   </>
                 ) : (
@@ -135,78 +160,79 @@ function Dashboard() {
             </div>
           </section>
         ) : (
+          /* Empty state — no current sample */
           <section className="grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
             <div className="panel hairline-grid flex min-h-[340px] flex-col items-center justify-center px-8 py-14 text-center">
               <div className="grid size-16 place-items-center rounded-full border border-border bg-card">
                 <Leaf className="size-7 text-primary" strokeWidth={1.5} />
               </div>
               <h2 className="mt-6 text-2xl font-semibold tracking-[-0.02em]">
-                Ready for a new leaf
+                {s.dashboard.readyForLeaf}
               </h2>
               <p className="mt-2 max-w-sm text-[15px] leading-relaxed text-muted-foreground">
-                {connected
-                  ? "Connected — scan a maize leaf from the phone to begin analysis."
-                  : "Waiting for phone scanner. Connect a phone on this network to start."}
+                {connected ? s.dashboard.scanNow : s.dashboard.waitingPhone}
               </p>
               <Link
                 to="/phone"
                 className="mt-6 rounded-md border border-border-strong px-4 py-2 text-sm font-medium transition-colors hover:bg-secondary"
               >
-                Open phone scanner
+                {s.dashboard.openPhoneScanner}
               </Link>
             </div>
 
+            {/* Pair QR */}
             <div className="panel p-6">
-              <div className="label-caps">Pair a phone</div>
+              <div className="label-caps">{s.pair.pairPhone}</div>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Make sure your phone is on the <strong>same Wi-Fi</strong> as this computer, then scan the QR code or type the address into the phone browser.
+                {s.pair.instructions}
               </p>
               <div className="mt-5 flex flex-col items-center gap-4">
                 <PairQr url={`http://${connection.address}/phone`} />
                 <div className="text-center">
-                  <div className="label-caps">Phone scanner URL</div>
-                  <div className="font-mono text-sm tracking-wide break-all select-all">
+                  <div className="label-caps">{s.pair.phoneUrl}</div>
+                  <div className="break-all select-all font-mono text-sm tracking-wide">
                     http://{connection.address}/phone
                   </div>
                 </div>
               </div>
               <dl className="mt-6 grid grid-cols-2 gap-4 border-t border-border pt-5">
-                <Field label="Station" value={connection.pcName} />
-                <Field label="Address" value={connection.address} />
+                <Field label={s.pair.stationLabel} value={connection.pcName} />
+                <Field label={s.pair.addressLabel} value={connection.address} />
               </dl>
             </div>
           </section>
         )}
 
+        {/* Recent scans + settings */}
         <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div className="panel">
             <div className="flex items-center justify-between border-b border-border px-5 py-3">
-              <h3 className="label-caps">Recent scans</h3>
+              <h3 className="label-caps">{s.dashboard.recentScans}</h3>
               <Link to="/history" className="text-sm text-primary hover:underline">
-                View all
+                {s.dashboard.viewAll}
               </Link>
             </div>
             {samples.length === 0 ? (
-              <p className="px-5 py-8 text-sm text-muted-foreground">
-                No scans yet. Completed analyses are stored on this computer only.
-              </p>
+              <p className="px-5 py-8 text-sm text-muted-foreground">{s.dashboard.noScans}</p>
             ) : (
               <ul className="divide-y divide-border">
-                {samples.slice(0, 5).map((s) => (
-                  <li key={s.id}>
+                {samples.slice(0, 5).map((samp) => (
+                  <li key={samp.id}>
                     <Link
                       to="/sample/$id"
-                      params={{ id: s.id }}
+                      params={{ id: samp.id }}
                       className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 transition-colors hover:bg-secondary/60"
                     >
                       <div className="min-w-0">
-                        <div className="truncate font-mono text-xs text-muted-foreground">{s.id}</div>
+                        <div className="truncate font-mono text-xs text-muted-foreground">{samp.id}</div>
                         <div className="truncate text-sm">
-                          {s.result?.primary.name ?? "Awaiting analysis"}
+                          {samp.result
+                            ? conditions[samp.result.primary.key].name
+                            : s.history.awaitingAnalysis}
                         </div>
                       </div>
                       <span className="font-mono text-sm">
-                        {s.result ? `${s.result.primary.confidence}%` : "—"}
+                        {samp.result ? `${samp.result.primary.confidence}%` : "—"}
                       </span>
                     </Link>
                   </li>
@@ -216,12 +242,12 @@ function Dashboard() {
           </div>
 
           <div className="panel p-5">
-            <h3 className="label-caps">Station settings</h3>
+            <h3 className="label-caps">{s.dashboard.stationSettings}</h3>
             <label className="mt-4 flex items-start justify-between gap-4">
               <span className="text-sm">
-                Analyse automatically
+                {s.dashboard.autoAnalyze}
                 <span className="mt-1 block text-xs text-muted-foreground">
-                  Start analysis as soon as an image arrives from the phone.
+                  {s.dashboard.autoAnalyzeHint}
                 </span>
               </span>
               <input
@@ -232,9 +258,9 @@ function Dashboard() {
               />
             </label>
             <dl className="mt-5 space-y-3 border-t border-border pt-5">
-              <Field label="Dataset" value={DATASET} />
-              <Field label="Completed analyses" value={String(completed)} />
-              <Field label="Storage" value="Local disk · 2.1 GB free" />
+              <Field label={s.dashboard.dataset}            value={DATASET} />
+              <Field label={s.dashboard.completedAnalyses}  value={String(completed)} />
+              <Field label={s.dashboard.storage}            value={locale === "sw" ? "Diski ya ndani · 2.1 GB huru" : "Local disk · 2.1 GB free"} />
             </dl>
           </div>
         </section>
@@ -242,6 +268,3 @@ function Dashboard() {
     </PcShell>
   );
 }
-
-// Keyboard shortcut: Enter starts analysis when current.status === 'received'
-// Implemented via useKeyboardShortcut({ key: 'Enter', enabled: isReady })
