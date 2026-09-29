@@ -2,12 +2,12 @@ import { en } from "./en";
 import { sw } from "./sw";
 
 export type Locale = "en" | "sw";
+export type { I18nKeys } from "./en";
 
 export const locales: Record<Locale, typeof en> = { en, sw };
 
 const STORAGE_KEY = "maizevision.locale";
 
-/** Read the stored locale, falling back to browser language detection */
 export function getLocale(): Locale {
   try {
     const stored = localStorage.getItem(STORAGE_KEY) as Locale;
@@ -17,8 +17,7 @@ export function getLocale(): Locale {
   return nav.startsWith("sw") ? "sw" : "en";
 }
 
-/** Persist a locale choice to localStorage */
-export function setLocale(locale: Locale) {
+export function setLocale(locale: Locale): void {
   try { localStorage.setItem(STORAGE_KEY, locale); } catch { /* quota */ }
 }
 
