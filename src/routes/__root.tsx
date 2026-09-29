@@ -13,6 +13,7 @@ import { toast } from "sonner";
 
 import appCss from "../styles.css?url";
 import { MaizeVisionProvider, useMaizeVision, type ImageQuality } from "@/lib/maizevision-store";
+import { LocaleProvider } from "@/lib/locale-context";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
@@ -93,7 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "data:," },
     ],
   }),
   shellComponent: RootShell,
@@ -121,12 +122,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <MaizeVisionProvider>
-        <PhoneImageListener />
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-        <Toaster position="top-center" />
-      </MaizeVisionProvider>
+      <LocaleProvider>
+        <MaizeVisionProvider>
+          <PhoneImageListener />
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+          <Toaster position="top-center" />
+        </MaizeVisionProvider>
+      </LocaleProvider>
     </QueryClientProvider>
   );
 }
