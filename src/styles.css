@@ -8,7 +8,7 @@
  * MaizeVision Local AI — design system.
  * Scientific field-diagnostic aesthetic: warm white paper, deep agricultural
  * green, restrained maize yellow, thin borders, minimal depth.
- * All colors are oklch tokens. No dark mode.
+ * All colors are oklch tokens.
  */
 
 @theme inline {
@@ -117,16 +117,27 @@
   --sidebar-ring: oklch(0.41 0.088 148);
 }
 
+/* Dark mode token overrides */
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.14 0.01 200);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.18 0.01 200);
+  --border: oklch(0.28 0.01 200);
+  --muted-foreground: oklch(0.60 0 0);
+  --primary: oklch(0.55 0.12 148);
 }
 
-/* Dark mode class applied by useTheme hook */
-.dark { color-scheme: dark; }
+@layer base {
   * {
     border-color: var(--color-border);
   }
 
   html {
+    scroll-behavior: smooth;
+    -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -135,6 +146,36 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv05";
     -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  :focus-visible {
+    outline: 2px solid oklch(0.41 0.088 148);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background-color: oklch(0.41 0.088 148 / 0.25);
+    color: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.6 0 0 / 0.4);
+    border-radius: 4px;
   }
 }
 
@@ -158,6 +199,18 @@
     linear-gradient(to right, oklch(0.41 0.088 148 / 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, oklch(0.41 0.088 148 / 0.06) 1px, transparent 1px);
   background-size: 28px 28px;
+}
+
+@utility sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @keyframes scanline {
@@ -195,74 +248,19 @@
   animation: pulse-dot 1.8s ease-in-out infinite;
 }
 
-/* Print styles: hide nav and toasts */
 @media print {
-  nav, [data-sonner-toaster] { display: none !important; }
+  nav,
+  [data-sonner-toaster] {
+    display: none !important;
+  }
 }
 
-/* Utility: visually hidden but accessible to screen readers */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Focus ring override for interactive elements */
-:focus-visible {
-  outline: 2px solid oklch(0.41 0.088 148);
-  outline-offset: 2px;
-}
-
-/* Custom animation: scan sweep for analysis in progress */
-@keyframes scan-sweep {
-  from { transform: translateY(-100%); }
-  to   { transform: translateY(100vh); }
-}
-.scan-sweep { animation: scan-sweep 2s linear infinite; }
-
-/* Smooth scrolling site-wide */
-html {
-  scroll-behavior: smooth;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-/* Scrollbar styling for webkit */
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: oklch(0.6 0 0 / 0.4); border-radius: 4px; }
-
-/* Selection highlight colour */
-::selection {
-  background-color: oklch(0.41 0.088 148 / 0.25);
-  color: inherit;
-}
-
-/* Reduced motion: disable animations for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Better default for images to avoid layout shift */
-img { display: block; max-width: 100%; }
-
-/* Dark mode token overrides */
-.dark {
-  --background: oklch(0.14 0.01 200);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.18 0.01 200);
-  --border: oklch(0.28 0.01 200);
-  --muted-foreground: oklch(0.60 0 0);
-  --primary: oklch(0.55 0.12 148);
 }
