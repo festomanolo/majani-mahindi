@@ -1,5 +1,7 @@
 import { CONDITIONS } from "@/lib/diagnosis";
+import { CONDITIONS_SW } from "@/lib/diagnosis-sw";
 import { formatTime, type Sample } from "@/lib/maizevision-store";
+import { useI18n } from "@/lib/locale-context";
 import {
   AdvisoryNote,
   ConfidenceBar,
@@ -15,18 +17,24 @@ import { Field } from "@/components/brand";
 /**
  * Full analysis result page.
  * Displays confidence, condition, signs, and recommendations.
+ * All text is locale-aware via useI18n.
  */
 export function ResultView({ sample }: { sample: Sample }) {
   const result = sample.result;
+  const { locale, strings } = useI18n();
+  const s = strings;
+
   if (!result) return null;
-  const condition = CONDITIONS[result.primary.key];
+
+  const conditions = locale === "sw" ? CONDITIONS_SW : CONDITIONS;
+  const condition = conditions[result.primary.key];
 
   return (
     <div className="space-y-10">
       <section className="panel p-6 lg:p-8">
-        <div className="label-caps">Analysis result</div>
+        <div className="label-caps">{s.analysis.analysisResult}</div>
         <h2 className="mt-2 text-3xl leading-tight font-semibold tracking-[-0.03em] lg:text-4xl">
-          {result.primary.name}
+          {condition.name}
         </h2>
         <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
           {condition.summary}
@@ -34,7 +42,7 @@ export function ResultView({ sample }: { sample: Sample }) {
 
         <div className="mt-6 grid gap-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
           <div>
-            <div className="label-caps">Confidence</div>
+            <div className="label-caps">{s.analysis.confidence}</div>
             <div className="mt-1 font-mono text-4xl tracking-[-0.03em]">
               {result.primary.confidence}%
             </div>
@@ -46,8 +54,8 @@ export function ResultView({ sample }: { sample: Sample }) {
             </div>
           </div>
           <dl className="grid grid-cols-2 gap-6 sm:grid-cols-1 sm:text-right">
-            <Field label="Processing time" value={`${(result.processingMs / 1000).toFixed(2)} s`} />
-            <Field label="Model" value={result.modelVersion} />
+            <Field label={s.analysis.processingTime} value={`${(result.processingMs / 1000).toFixed(2)} s`} />
+            <Field label={s.analysis.model} value={result.modelVersion} />
           </dl>
         </div>
 
@@ -55,10 +63,9 @@ export function ResultView({ sample }: { sample: Sample }) {
           <div className="mt-6">
             {result.notMaize ? (
               <div className="rounded-md border border-destructive/40 bg-destructive/10 px-4 py-4">
-                <p className="text-sm font-semibold text-destructive">Not a maize leaf</p>
+                <p className="text-sm font-semibold text-destructive">{s.analysis.notMaizeTitle}</p>
                 <p className="mt-1 text-sm leading-relaxed text-destructive/80">
-                  The image does not appear to be a maize leaf. Please photograph a single flat maize leaf
-                  filling the frame, with good lighting and a plain background.
+                  {s.analysis.notMaizeBody}
                 </p>
               </div>
             ) : (
@@ -77,11 +84,11 @@ export function ResultView({ sample }: { sample: Sample }) {
 
         <aside className="space-y-8">
           <section className="space-y-3">
-            <SectionTitle>Prediction details</SectionTitle>
+            <SectionTitle>{s.result.predictionDetails}</SectionTitle>
             <ul className="space-y-3">
               <li>
                 <div className="flex items-baseline justify-between gap-3 text-sm">
-                  <span className="font-medium">{result.primary.name}</span>
+                  <span className="font-medium">{condition.name}</span>
                   <span className="font-mono">{result.primary.confidence}%</span>
                 </div>
                 <div className="mt-1.5 h-1 rounded-full bg-secondary">
@@ -91,39 +98,42 @@ export function ResultView({ sample }: { sample: Sample }) {
                   />
                 </div>
               </li>
-              {result.alternatives.map((alt) => (
-                <li key={alt.key}>
-                  <div className="flex items-baseline justify-between gap-3 text-sm text-muted-foreground">
-                    <span>{alt.name}</span>
-                    <span className="font-mono">{alt.confidence}%</span>
-                  </div>
-                  <div className="mt-1.5 h-1 rounded-full bg-secondary">
-                    <div
-                      className="h-full rounded-full bg-border-strong"
-                      style={{ width: `${alt.confidence}%` }}
-                    />
-                  </div>
-                </li>
-              ))}
+              {result.alternatives.map((alt) => {
+                const altCondition = conditions[alt.key];
+                return (
+                  <li key={alt.key}>
+                    <div className="flex items-baseline justify-between gap-3 text-sm text-muted-foreground">
+                      <span>{altCondition.name}</span>
+                      <span className="font-mono">{alt.confidence}%</span>
+                    </div>
+                    <div className="mt-1.5 h-1 rounded-full bg-secondary">
+                      <div
+                        className="h-full rounded-full bg-border-strong"
+                        style={{ width: `${alt.confidence}%` }}
+                      />
+                    </div>
+                  </li>
+                );
+              })}
               <li className="flex items-baseline justify-between gap-3 text-sm text-muted-foreground">
-                <span>Other</span>
+                <span>{s.result.other}</span>
                 <span className="font-mono">{result.otherConfidence}%</span>
               </li>
             </ul>
           </section>
 
           <section className="space-y-3">
-            <SectionTitle>Sample metadata</SectionTitle>
+            <SectionTitle>{s.result.sampleMetadata}</SectionTitle>
             <div className="grid grid-cols-2 gap-4">
-              <Field label="Sample ID" value={sample.id} />
-              <Field label="Captured" value={formatTime(sample.capturedAt)} />
-              <Field label="Device" value={sample.device} />
-              <Field label="Image quality" value={sample.quality.overall} />
+              <Field label={s.result.sampleId}    value={sample.id} />
+              <Field label={s.result.captured}     value={formatTime(sample.capturedAt)} />
+              <Field label={s.result.device}       value={sample.device} />
+              <Field label={s.result.imageQuality} value={sample.quality.overall} />
             </div>
           </section>
 
           <section className="space-y-3">
-            <SectionTitle>Image quality</SectionTitle>
+            <SectionTitle>{s.result.imageQualitySection}</SectionTitle>
             <QualityChecks quality={sample.quality} />
           </section>
         </aside>
